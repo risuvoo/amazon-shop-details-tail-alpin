@@ -1,0 +1,1425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./fordev/temp.tailwind.min.js"></script>
+    <script defer src="./fordev/temp.alpine.min.js"></script>
+    <!--temporary config-->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#131921",
+                        secondery: "#febd69",
+                        third: "#232f3e",
+                        tblack: "#0F1111",
+                        tgray: "#565959",
+                        thover: "#C7511F",
+                    },
+                },
+            },
+        };
+    </script>
+    <title>amazon</title>
+    <style>
+        [x-cloak] {
+            display: none !important;
+        }
+    </style>
+</head>
+
+<body x-data="{
+    backToTop:function(){
+    window.scrollTo({top:0,behavior: 'smooth'})
+
+    },
+    drawer:false,
+    toggleDrawer:function(){
+    this.drawer=!this.drawer;
+    },
+    category:true,
+    toggleCategory:function(){
+    this.category=!this.category;
+    },
+    feedback:false,
+    feedBackHandler:function(){
+    this.feedback=!this.feedback;
+    }
+  }">
+    <div class="drawer-menu-wrapper relative transition duration-300 ease-in-out">
+        <template x-cloak x-if="drawer">
+            <div @click="toggleDrawer()" class="fixed w-full h-full bg-black z-40 left-0 top-0 bg-opacity-70"></div>
+        </template>
+        <template x-cloak x-if="drawer">
+            <div @click="toggleDrawer()" class="text-white absolute left-[375px] top-[15px] z-50 cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </div>
+        </template>
+        <div x-cloak x-show="drawer" x-transition:enter="transition ease-in-out duration-300"
+            x-transition:enter-start="-left-[400px]" x-transition:enter-end="left-0"
+            x-transition:leave="transition ease-in-out duration-300" x-transition:leave-start="left-0"
+            x-transition:leave-end="-left-[400px]"
+            class="w-[365px] h-full fixed bg-white shadow top-0 z-40 transition-all duration-300 overflow-x-hidden">
+            <div class="w-full relative h-[50px] flex justify-start items-center bg-[#232F3E] pl-[30px]">
+                <div class="flex space-x-3 items-center">
+                    <div>
+                        <img src="./images/usr.png" alt="" />
+                    </div>
+                    <div>
+                        <p class="text-xl font-bold text-white">Hello, sign in</p>
+                    </div>
+                </div>
+            </div>
+            <div x-cloak x-show="category" x-transition:enter="transition ease-in-out duration-300"
+                x-transition:enter-start="-left-[400px]" x-transition:enter-end="left-0"
+                x-transition:leave="transition ease-in-out duration-300" x-transition:leave-start="left-0"
+                x-transition:leave-end="-left-[400px]"
+                class="category-wrapper fixed w-[365px] transition-all duration-300 ease-in-out">
+                <ul class="category py-[30px] border-b border-gray">
+                    <li>
+                        <span class="text-[#0F1111] font-bold text-lg px-[30px]">Digital Content & Devices</span>
+                        <ul>
+                            <li @click="toggleCategory()"
+                                class="flex justify-between items-center py-[13px] cursor-pointer px-[30px] hover:bg-[#eaeded]">
+                                <a href="#" class="text-sm text-[#111111]">Digital Content & Devices</a>
+                                <span>
+                                    <img src="./images/arrow.png" alt="" />
+                                </span>
+                            </li>
+                            <li @click="toggleCategory()"
+                                class="flex justify-between items-center py-[13px] cursor-pointer px-[30px] hover:bg-[#eaeded]">
+                                <a href="#" class="text-sm text-[#111111]">Digital Content & Devices</a>
+                                <span>
+                                    <img src="./images/arrow.png" alt="" />
+                                </span>
+                            </li>
+                            <li @click="toggleCategory()"
+                                class="flex justify-between items-center py-[13px] cursor-pointer px-[30px] hover:bg-[#eaeded]">
+                                <a href="#" class="text-sm text-[#111111]">Digital Content & Devices</a>
+                                <span>
+                                    <img src="./images/arrow.png" alt="" />
+                                </span>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="category py-[30px] border-b border-gray">
+                    <li>
+                        <span class="text-[#0F1111] font-bold text-lg px-[30px]">Digital Content & Devices</span>
+                        <ul>
+                            <li @click="toggleCategory()"
+                                class="flex justify-between items-center py-[13px] cursor-pointer px-[30px] hover:bg-[#eaeded]">
+                                <a href="#" class="text-sm text-[#111111]">Digital Content & Devices</a>
+                                <span>
+                                    <img src="./images/arrow.png" alt="" />
+                                </span>
+                            </li>
+                            <li @click="toggleCategory()"
+                                class="flex justify-between items-center py-[13px] cursor-pointer px-[30px] hover:bg-[#eaeded]">
+                                <a href="#" class="text-sm text-[#111111]">Digital Content & Devices</a>
+                                <span>
+                                    <img src="./images/arrow.png" alt="" />
+                                </span>
+                            </li>
+                            <li @click="toggleCategory()"
+                                class="flex justify-between items-center py-[13px] cursor-pointer px-[30px] hover:bg-[#eaeded]">
+                                <a href="#" class="text-sm text-[#111111]">Digital Content & Devices</a>
+                                <span>
+                                    <img src="./images/arrow.png" alt="" />
+                                </span>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="category py-[30px]">
+                    <li>
+                        <span class="text-[#0F1111] font-bold text-lg px-[30px]">Help & Settings</span>
+                        <ul>
+                            <li
+                                class="flex justify-between items-center py-[13px] cursor-pointer px-[30px] hover:bg-[#eaeded]">
+                                <a href="#" class="text-sm text-[#111111]">Your account</a>
+                            </li>
+                            <li
+                                class="flex justify-between items-center py-[13px] cursor-pointer px-[30px] hover:bg-[#eaeded]">
+                                <div class="flex space-x-2 items-center">
+                                    <img src="./images/world2.png" alt="" class="w-[14px] h-[14px]" />
+                                    <span>English</span>
+                                </div>
+                            </li>
+                            <li
+                                class="flex justify-between items-center py-[13px] cursor-pointer px-[30px] hover:bg-[#eaeded]">
+                                <div class="flex space-x-2 items-center">
+                                    <img src="./images/us.png" alt="" class="w-[14px] h-[14px]" />
+                                    <span>United States</span>
+                                </div>
+                            </li>
+                            <li @click="toggleCategory()"
+                                class="flex justify-between items-center py-[13px] cursor-pointer px-[30px] hover:bg-[#eaeded]">
+                                <a href="#" class="text-sm text-[#111111]">Customer Service</a>
+                            </li>
+                            <li
+                                class="flex justify-between items-center py-[13px] cursor-pointer px-[30px] hover:bg-[#eaeded]">
+                                <a href="#" class="text-sm text-[#111111]">Sign in</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div x-cloak x-show="!category" x-transition:enter="transition ease-in-out duration-300"
+                x-transition:enter-start="left-[400px]" x-transition:enter-end="left-0"
+                x-transition:leave="transition ease-in-out duration-300" x-transition:leave-start="left-0"
+                x-transition:leave-end="left-[400px]"
+                class="child-category-wrapper w-full absolute top-[50px] transition-all duration-300 ease-in-out">
+                <div @click="toggleCategory()"
+                    class="flex space-x-2 py-[13px] items-center cursor-pointer px-[30px] border-b">
+                    <span>
+                        <img src="./images/arrow-2.png" alt="" />
+                    </span>
+                    <span class="uppercase text-sm text-[#0F1111] font-bold">Main menu</span>
+                </div>
+                <div class="pt-[13px]">
+                    <ul class="category">
+                        <li>
+                            <span class="text-[#0F1111] font-bold text-lg px-[30px]">Digital Content & Devices</span>
+                            <ul>
+                                <li
+                                    class="flex justify-between items-center py-[13px] cursor-pointer px-[30px] hover:bg-[#eaeded]">
+                                    <a href="#" class="text-sm text-[#111111]">Digital Content & Devices</a>
+                                </li>
+                                <li
+                                    class="flex justify-between items-center py-[13px] cursor-pointer px-[30px] hover:bg-[#eaeded]">
+                                    <a href="#" class="text-sm text-[#111111]">Digital Content & Devices</a>
+                                </li>
+                                <li
+                                    class="flex justify-between items-center py-[13px] cursor-pointer px-[30px] hover:bg-[#eaeded]">
+                                    <a href="#" class="text-sm text-[#111111]">Digital Content & Devices</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <template x-cloak x-if="feedback">
+        <div class="feedback-wrapper w-full">
+            <div class="fixed left-0 top-0 flex justify-center items-center w-full h-screen z-40">
+                <div @click="feedBackHandler()" class="w-full h-full fixed left-0 top-0 bg-black bg-opacity-50"></div>
+                <div class="w-[464px] h-[427px] bg-white relative z-40 rounded-lg overflow-hidden">
+                    <div class="w-full h-[60px] bg-[#F0F2F2] flex items-center justify-between px-6">
+                        <h1 class="text-base text-[#565959] font-bold">Leave feedback</h1>
+                        <span @click="feedBackHandler()" class="cursor-pointer text-[#565959]">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                                class="fill-current">
+                                <path
+                                    d="M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636z" />
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="pt-6 px-6">
+                        <p class="text-[#565959] text-base font-bold mb-4">This ad is:</p>
+                        <div class="mb-2.5">
+                            <ul class="flex flex-col space-y-1">
+                                <li class="group">
+                                    <div class="flex items-center">
+                                        <input type="checkbox" id="id23" class="accent-[#1196AB] w-4 h-4" />
+                                        <label for="id23" class="text-sm ml-1 text-[#0F1111] cursor-pointer">Premium
+                                            Brands</label>
+                                    </div>
+                                </li>
+                                <li class="group">
+                                    <div class="flex items-center">
+                                        <input type="checkbox" id="id24" class="accent-[#1196AB] w-4 h-4" />
+                                        <label for="id24" class="text-sm ml-1 text-[#0F1111] cursor-pointer">Premium
+                                            Brands</label>
+                                    </div>
+                                </li>
+                                <li class="group">
+                                    <div class="flex items-center">
+                                        <input type="checkbox" id="id25" class="accent-[#1196AB] w-4 h-4" />
+                                        <label for="id25" class="text-sm ml-1 text-[#0F1111] cursor-pointer">Premium
+                                            Brands</label>
+                                    </div>
+                                </li>
+                                <li class="group">
+                                    <div class="flex items-center">
+                                        <input type="checkbox" id="id26" class="accent-[#1196AB] w-4 h-4" />
+                                        <label for="id26" class="text-sm ml-1 text-[#0F1111] cursor-pointer">Premium
+                                            Brands</label>
+                                    </div>
+                                </li>
+                                <li class="group">
+                                    <div class="flex items-center">
+                                        <input type="checkbox" id="id27" class="accent-[#1196AB] w-4 h-4" />
+                                        <label for="id27" class="text-sm ml-1 text-[#0F1111] cursor-pointer">Premium
+                                            Brands</label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <label for="feedback" class="text-[#565959] text-base font-bold mb-4 block mb-2">Please tell
+                                us why (optional)</label>
+                            <textarea id="feedback" placeholder="Do not include personal or sensitive data"
+                                class="w-full h-[68px] focus:outline-none border border-[#888C8C] focus:ring-2 focus:ring-[#c8f3fa] rounded p-2"></textarea>
+                            <span class="text-xs text-[#565959]">5000 characters left</span>
+                        </div>
+                        <div class="w-full flex justify-end">
+                            <div class="flex space-x-2 items-center">
+                                <button @click="feedBackHandler()" type="type"
+                                    class="w-[59px] h-[29px] rounded-lg text-sm border shadow-lg">
+                                    Cancel
+                                </button>
+                                <button type="type"
+                                    class="w-[63px] h-[29px] rounded-lg text-sm border shadow-lg bg-[#FFEC8A] border-[#FFEC8A] text-gray-500">
+                                    Submit
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <header>
+        <div class="web-header xl:block hidden">
+            <div class="header-wrapper w-full px-5 bg-[#131921] h-[60px] items-center relative z-30">
+                <div class="flex space-x-8 items-center w-full">
+                    <div class="px-1 pt-1 pb-1 border border-transparent hover:border-white cursor-pointer">
+                        <img src="./images/logo.png" alt="logo" />
+                    </div>
+                    <button type="button" class="px-3 py-2.5 border border-transparent hover:border-white">
+                        <div class="flex items-center">
+                            <span class="text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                                </svg>
+                            </span>
+                            <div class="flex flex-col">
+                                <span class="text-white text-xs leading-none">Deliver to</span>
+                                <span class="text-white text-sm leading-none font-bold">Bulgaria</span>
+                            </div>
+                        </div>
+                    </button>
+                    <div x-data="{
+                category:{
+                 active:'All',
+                 open:false,
+                 toggle: function(){
+                 this.open =!this.open;
+                 },
+                 categories:['All Departments','Arts & Crafts'],
+                 selectCategory:function(value){
+                 this.active=value;
+                 this.toggle();
+                 },
+
+              },
+              search:{
+              suggestBox:false,
+              toggleBox:function(){
+              this.suggestBox=!this.suggestBox;
+              }
+              }
+
+             }" class="flex-1 bg-white h-[40px] rounded flex justify-between relative">
+                        <div>
+                            <button @click="category.toggle()" type="button"
+                                class="h-full bg-[#f3f3f3] flex justify-center items-center rounded-l cursor-pointer select-none">
+                                <div class="flex items-center px-3">
+                                    <span class="text-[#565959] text-xs mr-1" x-text="category.active"></span>
+                                    <span
+                                        class="w-0 h-0 border-4 block border-b-transparent border-l-transparent border-r-transparent border-t-[#232f3e] border-b-0"></span>
+                                </div>
+                            </button>
+                            <template x-cloak x-if="category.open">
+                                <div @click="category.toggle()" class="fixed w-full h-full left-0 top-0 z-10"></div>
+                            </template>
+                            <div x-cloak x-show="category.open"
+                                class="w-[204px] h-[382px] bg-white rounded-lg shadow-xl absolute left-1 top-[38px] border border-[#DDD] overflow-y-scroll z-20">
+                                <ul>
+                                    <template x-for="i in category.categories">
+                                        <li x-text="i" @click="category.selectCategory(i)"
+                                            class="text-sm text-[#0F1111] pl-1 hover:bg-blue-500 hover:text-white cursor-pointer">
+                                        </li>
+                                    </template>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="flex-1 h-full relative">
+                            <input x-on:focus="search.toggleBox()" type="text"
+                                class="w-full h-full focus:outline-none text-[#0F1111] font-medium px-2 placeholder:text-sm"
+                                placeholder="Search product ..." />
+                            <template x-cloak x-if="search.suggestBox">
+                                <div @click="search.toggleBox()" class="fixed w-full h-full left-0 top-0 z-10"></div>
+                            </template>
+                            <div x-cloak x-show="search.suggestBox"
+                                class="w-full bg-white border border-[#DDD] absolute left-0 top-[40px] z-20 shadow-xl">
+                                <ul>
+                                    <template x-for="i in category.categories">
+                                        <li
+                                            class="text-md text-[#0F1111] pl-1 h-[40px] flex items-center hover:bg-[#eee] cursor-pointer font-medium px-3">
+                                            <a href="#"> Lorem </a>
+                                        </li>
+                                        <li
+                                            class="text-md text-[#0F1111] pl-1 h-[40px] flex items-center hover:bg-[#eee] cursor-pointer font-medium px-3">
+                                            <a href="#"> Lorem </a>
+                                        </li>
+                                    </template>
+                                </ul>
+                            </div>
+                        </div>
+                        <div
+                            class="w-[50px] h-full bg-[#febd69] hover:bg-[#F3A847] flex justify-center items-center cursor-pointer rounded-r">
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="relative group px-3 py-2 border border-transparent hover:border-white">
+                        <style>
+                            .language-item:hover .lang-radio {
+                                display: block !important;
+                            }
+                        </style>
+                        <a href="#">
+                            <span class="text-white text-xs">English</span>
+                            <div class="flex justify-center">
+                                <div class="flex space-x-2 items-center">
+                                    <span>
+                                        <img src="./images/us.png" alt="" />
+                                    </span>
+                                    <span
+                                        class="w-0 h-0 border-4 block border-b-transparent border-l-transparent border-r-transparent border-t-[#a7acb2] border-b-0"></span>
+                                </div>
+                            </div>
+                        </a>
+                        <div
+                            class="w-0 h-0 border-[9px] border-b-white group-hover:block hidden border-transparent absolute left-[22px] -bottom-[2px] z-30">
+                        </div>
+                        <div
+                            class="w-[240px] group-hover:block hidden bg-white border rounded shadow-xl border border-[#DDD] absolute -left-3 top-[50px] p-4">
+                            <div class="pb-4 border-b border-gray-200">
+                                <div class="flex items-center space-x-2 mb-3">
+                                    <span class="text-xs font-medium text-[#565959] leading-none">Change language</span>
+                                    <span class="text-[11px] text-[#007185] leading-none">Learn more</span>
+                                </div>
+                                <div class="flex space-x-3 items-center">
+                                    <div
+                                        class="w-[18px] h-[18px] rounded-full border border-gray-300 flex justify-center items-center">
+                                        <div class="w-[8px] h-[8px] bg-[#E87326] rounded-full"></div>
+                                    </div>
+                                    <span class="text-[#0F1111] text-xs leading-none">English - EN</span>
+                                </div>
+                            </div>
+                            <div class="flex flex-col space-y-2 mt-4 pb-4 border-b border-gray-200">
+                                <a href="#">
+                                    <div class="language-item flex space-x-3 items-center">
+                                        <div
+                                            class="w-[18px] h-[18px] rounded-full border border-gray-300 flex justify-center items-center">
+                                            <div class="lang-radio w-[8px] h-[8px] bg-[#E87326] rounded-full hidden">
+                                            </div>
+                                        </div>
+                                        <span
+                                            class="text-[#0F1111] hover:text-[#C7511F] hover:underline text-xs leading-none">English
+                                            - EN</span>
+                                    </div>
+                                </a><a href="#">
+                                    <div class="language-item flex space-x-3 items-center">
+                                        <div
+                                            class="w-[18px] h-[18px] rounded-full border border-gray-300 flex justify-center items-center">
+                                            <div class="lang-radio w-[8px] h-[8px] bg-[#E87326] rounded-full hidden">
+                                            </div>
+                                        </div>
+                                        <span
+                                            class="text-[#0F1111] hover:text-[#C7511F] hover:underline text-xs leading-none">English
+                                            - EN</span>
+                                    </div>
+                                </a><a href="#">
+                                    <div class="language-item flex space-x-3 items-center">
+                                        <div
+                                            class="w-[18px] h-[18px] rounded-full border border-gray-300 flex justify-center items-center">
+                                            <div class="lang-radio w-[8px] h-[8px] bg-[#E87326] rounded-full hidden">
+                                            </div>
+                                        </div>
+                                        <span
+                                            class="text-[#0F1111] hover:text-[#C7511F] hover:underline text-xs leading-none">English
+                                            - EN</span>
+                                    </div>
+                                </a><a href="#">
+                                    <div class="language-item flex space-x-3 items-center">
+                                        <div
+                                            class="w-[18px] h-[18px] rounded-full border border-gray-300 flex justify-center items-center">
+                                            <div class="lang-radio w-[8px] h-[8px] bg-[#E87326] rounded-full hidden">
+                                            </div>
+                                        </div>
+                                        <span
+                                            class="text-[#0F1111] hover:text-[#C7511F] hover:underline text-xs leading-none">English
+                                            - EN</span>
+                                    </div>
+                                </a><a href="#">
+                                    <div class="language-item flex space-x-3 items-center">
+                                        <div
+                                            class="w-[18px] h-[18px] rounded-full border border-gray-300 flex justify-center items-center">
+                                            <div class="lang-radio w-[8px] h-[8px] bg-[#E87326] rounded-full hidden">
+                                            </div>
+                                        </div>
+                                        <span
+                                            class="text-[#0F1111] hover:text-[#C7511F] hover:underline text-xs leading-none">English
+                                            - EN</span>
+                                    </div>
+                                </a><a href="#">
+                                    <div class="language-item flex space-x-3 items-center">
+                                        <div
+                                            class="w-[18px] h-[18px] rounded-full border border-gray-300 flex justify-center items-center">
+                                            <div class="lang-radio w-[8px] h-[8px] bg-[#E87326] rounded-full hidden">
+                                            </div>
+                                        </div>
+                                        <span
+                                            class="text-[#0F1111] hover:text-[#C7511F] hover:underline text-xs leading-none">English
+                                            - EN</span>
+                                    </div>
+                                </a><a href="#">
+                                    <div class="language-item flex space-x-3 items-center">
+                                        <div
+                                            class="w-[18px] h-[18px] rounded-full border border-gray-300 flex justify-center items-center">
+                                            <div class="lang-radio w-[8px] h-[8px] bg-[#E87326] rounded-full hidden">
+                                            </div>
+                                        </div>
+                                        <span
+                                            class="text-[#0F1111] hover:text-[#C7511F] hover:underline text-xs leading-none">English
+                                            - EN</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="mt-4 pb-4 border-b border-gray-200">
+                                <div class="flex items-center space-x-2 mb-3">
+                                    <span class="text-xs font-medium text-[#565959] leading-none">Change currency</span>
+                                    <span class="text-[11px] text-[#007185] leading-none">Learn more</span>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-xs font-medium text-[#565959] leading-none">$ - USD - US Dollar
+                                    </span>
+                                    <button type="button" class="text-[11px] text-[#007185] leading-none">
+                                        change
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="mt-4 overflow-hidden items-center">
+                                <img src="./images/us.png" alt="" class="float-left mr-2" />
+                                <p class="text-xs font-medium text-[#565959] leading-none">
+                                    You are shopping on <br />
+                                    Amazon.com
+                                </p>
+                                <div class="flex justify-center items-center mt-3">
+                                    <a href="#" class="text-sm hover:underline text-blue-500">
+                                        Change country/region.
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative group mt-2 px-1 pb-2 border border-transparent hover:border-white">
+                        <a href="#">
+                            <span class="text-white text-xs leading-none">Hello, sign in</span>
+                            <div class="flex justify-center">
+                                <div class="flex space-x-2 items-center">
+                                    <span class="text-sm font-bold text-white leading-none">
+                                        Account & Lists
+                                    </span>
+                                    <span
+                                        class="w-0 h-0 border-4 block border-b-transparent border-l-transparent border-r-transparent border-t-[#a7acb2] border-b-0"></span>
+                                </div>
+                            </div>
+                        </a>
+                        <div
+                            class="w-0 h-0 group-hover:block hidden border-[9px] border-b-white border-transparent absolute left-[110px] -bottom-[5px] z-30">
+                        </div>
+                        <div
+                            class="w-[500px] h-[387px] group-hover:block hidden bg-white border rounded shadow-xl border border-[#DDD] absolute -left-[240px] top-[48px] p-6">
+                            <div class="flex flex-col items-center border-b pb-3 mb-3">
+                                <a href="#">
+                                    <div style="
+                        background: linear-gradient(
+                          to bottom,
+                          #f7dfa5,
+                          #f0c14b
+                        );
+                        border-color: #a88734 #9c7e31 #846a29;
+                        border-style: solid;
+                        border-width: 1px;
+                      " class="w-[197px] h-[33px] flex justify-center items-center rounded">
+                                        <span class="text-xs font-bold text-[#0F1111]">Sign in</span>
+                                    </div>
+                                </a>
+                                <p class="text-[11px] font-medium text-[#0F1111] text-center">
+                                    New customer?
+                                    <a href="#" class="text-[#007185]">Start here.</a>
+                                </p>
+                            </div>
+                            <div class="flex justify-between">
+                                <div class="w-1/2">
+                                    <h1 class="text-base text-[#0F1111] font-bold mb-2">
+                                        Your Lists
+                                    </h1>
+                                    <ul class="flex flex-col space-y-2">
+                                        <li class="text-[13px] text-[#565959] hover:text-[#e47911] hover:underline">
+                                            <a href="#">hello</a>
+                                        </li>
+                                        <li class="text-[13px] text-[#565959] hover:text-[#e47911] hover:underline">
+                                            <a href="#">hello</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="w-1/2 border-l pl-6">
+                                    <h1 class="text-base text-[#0F1111] font-bold mb-2">
+                                        Your Lists
+                                    </h1>
+                                    <ul class="flex flex-col space-y-2">
+                                        <li class="text-[13px] text-[#565959] hover:text-[#e47911] hover:underline">
+                                            <a href="#">hello</a>
+                                        </li>
+                                        <li class="text-[13px] text-[#565959] hover:text-[#e47911] hover:underline">
+                                            <a href="#">hello</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-1 pb-2 pt-1 border border-transparent hover:border-white">
+                        <a href="#">
+                            <span class="text-white text-xs leading-none">Returns</span>
+                            <div class="flex justify-center">
+                                <div class="flex space-x-2 items-center">
+                                    <span class="text-sm font-bold text-white leading-none">
+                                        & Orders
+                                    </span>
+                                    <span
+                                        class="w-0 h-0 border-4 block border-b-transparent border-l-transparent border-r-transparent border-t-[#a7acb2] border-b-0 hidden"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="px-1 pt-1 pb-2 border border-transparent hover:border-white">
+                        <a href="#">
+                            <div class="flex items-end">
+                                <span class="relative">
+                                    <img src="./images/cart.png" alt="cart" />
+                                    <span
+                                        class="text-sm font-bold text-white absolute left-[18px] -top-1 text-[#f08804]">0</span>
+                                </span>
+                                <span class="text-sm font-bold text-white">Cart</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="aditional-nav-wrapper w-full bg-[#232f3e] px-5 h-[40px] flex items-center">
+                <div class="flex space-x-5 items-center">
+                    <div @click="toggleDrawer()"
+                        class="flex space-x-1 items-center cursor-pointer px-1 pt-1 pb-1 border border-transparent hover:border-white">
+                        <span class="text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                            </svg>
+                        </span>
+                        <span class="text-sm font-medium text-white">All</span>
+                    </div>
+                    <a href="#"
+                        class="text-sm font-medium text-white px-1 pt-1 pb-1 border border-transparent hover:border-white">Today's
+                        Deals</a>
+                    <a href="#"
+                        class="text-sm font-medium text-white px-1 pt-1 pb-1 border border-transparent hover:border-white">Customer
+                        Service</a>
+                    <a href="#"
+                        class="text-sm font-medium text-white px-1 pt-1 pb-1 border border-transparent hover:border-white">Registry</a>
+                    <a href="#"
+                        class="text-sm font-medium text-white px-1 pt-1 pb-1 border border-transparent hover:border-white">Gift
+                        Cards</a>
+                    <a href="#"
+                        class="text-sm font-medium text-white px-1 pt-1 pb-1 border border-transparent hover:border-white">Sell</a>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-header xl:hidden block">
+            <div class="w-full h-[100px] bg-[#232f3e] px-3 pt-3">
+                <div class="w-full flex justify-between items-center">
+                    <div class="flex space-x-2.5 items-start">
+                        <div class="cursor-pointer" @click="toggleDrawer()">
+                            <span class="text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                                </svg>
+                            </span>
+                        </div>
+                        <div>
+                            <img src="./images/logo.png" alt="" />
+                        </div>
+                    </div>
+                    <div class="flex space-x-4">
+                        <div class="flex">
+                            <div class="flex items-center">
+                                <span class="text-xs text-white"> Sign in</span>
+                                <span class="text-white">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="fill-current" viewBox="0 0 24 24"
+                                        width="24" height="24">
+                                        <path d="M12.172 12L9.343 9.172l1.414-1.415L15 12l-4.243 4.243-1.414-1.415z" />
+                                    </svg>
+                                </span>
+                            </div>
+                            <span class="text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                                    class="fill-current">
+                                    <path
+                                        d="M20 22h-2v-2a3 3 0 0 0-3-3H9a3 3 0 0 0-3 3v2H4v-2a5 5 0 0 1 5-5h6a5 5 0 0 1 5 5v2zm-8-9a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8z" />
+                                </svg>
+                            </span>
+                        </div>
+                        <div>
+                            <span class="relative">
+                                <img src="./images/cart.png" alt="cart" />
+                                <span
+                                    class="text-sm font-bold text-white absolute left-[18px] -top-1 text-[#f08804]">0</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div
+                        class="bg-white h-[40px] rounded flex justify-between rounded-lg overflow-hidden relative mt-2">
+                        <div class="flex-1 h-full relative">
+                            <input type="text"
+                                class="w-full h-full focus:outline-none text-[#0F1111] font-medium px-2 placeholder:text-sm"
+                                placeholder="Search product ..." />
+                        </div>
+                        <div
+                            class="w-[50px] h-full bg-[#febd69] hover:bg-[#F3A847] flex justify-center items-center rounded-lg cursor-pointer">
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full h-[45px] bg-[#37475A] flex items-center px-3">
+                <div class="flex space-x-2 items-center">
+                    <span class="text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"
+                            class="fill-current">
+                            <path
+                                d="M12 20.9l4.95-4.95a7 7 0 1 0-9.9 0L12 20.9zm0 2.828l-6.364-6.364a9 9 0 1 1 12.728 0L12 23.728zM12 13a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0 2a4 4 0 1 1 0-8 4 4 0 0 1 0 8z" />
+                        </svg>
+                    </span>
+                    <span class="text-sm text-white font-semibold">Deliver to Bulgaria</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!--      sign in section-->
+        <section class="w-full h-[120px] flex justify-center items-center border-t border-b border-[#ddd]">
+            <div>
+                <p class="text-sm text-[#0F1111] text-center font-medium mb-[2px]">
+                    See personalized recommendations
+                </p>
+                <a href="#">
+                    <div style="
+                background-image: url(./images/yellow-btn.png);
+                background-repeat: no-repeat;
+                object-fit: contain;
+              " class="w-[230px] h-[28px] flex justify-center items-center rounded">
+                        <span class="text-xs font-bold text-[#0F1111]">Sign in</span>
+                    </div>
+                </a>
+                <p class="text-[11px] font-medium text-[#0F1111] text-center">
+                    New customer? <a href="#" class="text-[#007185]">Start here.</a>
+                </p>
+            </div>
+        </section>
+        <!--      back to top-->
+        <section @click="backToTop"
+            class="w-full h-[50px] flex items-center justify-center bg-[#485769] cursor-pointer">
+            <button type="button" class="text-sm text-white font-medium">
+                Back to top
+            </button>
+        </section>
+    </main>
+    <footer>
+        <section>
+            <div class="w-full py-[50px] bg-[#232F3E] border-b border-[#3a4553] px-2">
+                <div class="container mx-auto">
+                    <div class="w-full h-full flex lg:flex-row flex-col space-y-5 lg:space-y-0 justify-evenly">
+                        <div class="flex flex-col items-center lg:items-start justify-center">
+                            <h1 class="text-base font-bold text-white mb-2">
+                                Get to Know Us
+                            </h1>
+                            <ul class="flex flex-col space-y-0.5">
+                                <li class="text-sm text-white hover:underline">
+                                    <a href="#">Careers </a>
+                                </li>
+                                <li class="text-sm text-white hover:underline">
+                                    <a href="#">Careers </a>
+                                </li>
+                                <li class="text-sm text-white hover:underline">
+                                    <a href="#">Careers </a>
+                                </li>
+                                <li class="text-sm text-white hover:underline">
+                                    <a href="#">Careers </a>
+                                </li>
+                                <li class="text-sm text-white hover:underline">
+                                    <a href="#">Careers </a>
+                                </li>
+                                <li class="text-sm text-white hover:underline">
+                                    <a href="#">Careers </a>
+                                </li>
+                                <li class="text-sm text-white hover:underline">
+                                    <a href="#">Careers </a>
+                                </li>
+                                <li class="text-sm text-white hover:underline">
+                                    <a href="#">Careers </a>
+                                </li>
+                                <li class="text-sm text-white hover:underline">
+                                    <a href="#">Careers </a>
+                                </li>
+                                <li class="text-sm text-white hover:underline">
+                                    <a href="#">Careers </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-col items-center lg:items-start justify-center">
+                            <h1 class="text-base font-bold text-white mb-2">
+                                Get to Know Us
+                            </h1>
+                            <ul class="flex flex-col space-y-0.5">
+                                <li class="text-sm text-white hover:underline">
+                                    <a href="#">Careers </a>
+                                </li>
+                                <li class="text-sm text-white hover:underline">
+                                    <a href="#">Careers </a>
+                                </li>
+                                <li class="text-sm text-white hover:underline">
+                                    <a href="#">Careers </a>
+                                </li>
+                                <li class="text-sm text-white hover:underline">
+                                    <a href="#">Careers </a>
+                                </li>
+                                <li class="text-sm text-white hover:underline">
+                                    <a href="#">Careers </a>
+                                </li>
+                                <li class="text-sm text-white hover:underline">
+                                    <a href="#">Careers </a>
+                                </li>
+                                <li class="text-sm text-white hover:underline">
+                                    <a href="#">Careers </a>
+                                </li>
+                                <li class="text-sm text-white hover:underline">
+                                    <a href="#">Careers </a>
+                                </li>
+                                <li class="text-sm text-white hover:underline">
+                                    <a href="#">Careers </a>
+                                </li>
+                                <li class="text-sm text-white hover:underline">
+                                    <a href="#">Careers </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-col items-center lg:items-start justify-center">
+                            <h1 class="text-base font-bold text-white mb-2">
+                                Get to Know Us
+                            </h1>
+                            <ul class="flex flex-col space-y-0.5">
+                                <li class="text-sm text-white hover:underline">
+                                    <a href="#">Careers </a>
+                                </li>
+                                <li class="text-sm text-white hover:underline">
+                                    <a href="#">Careers </a>
+                                </li>
+                                <li class="text-sm text-white hover:underline">
+                                    <a href="#">Careers </a>
+                                </li>
+                                <li class="text-sm text-white hover:underline">
+                                    <a href="#">Careers </a>
+                                </li>
+                                <li class="text-sm text-white hover:underline">
+                                    <a href="#">Careers </a>
+                                </li>
+                                <li class="text-sm text-white hover:underline">
+                                    <a href="#">Careers </a>
+                                </li>
+                                <li class="text-sm text-white hover:underline">
+                                    <a href="#">Careers </a>
+                                </li>
+                                <li class="text-sm text-white hover:underline">
+                                    <a href="#">Careers </a>
+                                </li>
+                                <li class="text-sm text-white hover:underline">
+                                    <a href="#">Careers </a>
+                                </li>
+                                <li class="text-sm text-white hover:underline">
+                                    <a href="#">Careers </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-col items-center lg:items-start justify-center">
+                            <h1 class="text-base font-bold text-white mb-2">
+                                Get to Know Us
+                            </h1>
+                            <ul class="flex flex-col space-y-0.5">
+                                <li class="text-sm text-white hover:underline">
+                                    <a href="#">Careers </a>
+                                </li>
+                                <li class="text-sm text-white hover:underline">
+                                    <a href="#">Careers </a>
+                                </li>
+                                <li class="text-sm text-white hover:underline">
+                                    <a href="#">Careers </a>
+                                </li>
+                                <li class="text-sm text-white hover:underline">
+                                    <a href="#">Careers </a>
+                                </li>
+                                <li class="text-sm text-white hover:underline">
+                                    <a href="#">Careers </a>
+                                </li>
+                                <li class="text-sm text-white hover:underline">
+                                    <a href="#">Careers </a>
+                                </li>
+                                <li class="text-sm text-white hover:underline">
+                                    <a href="#">Careers </a>
+                                </li>
+                                <li class="text-sm text-white hover:underline">
+                                    <a href="#">Careers </a>
+                                </li>
+                                <li class="text-sm text-white hover:underline">
+                                    <a href="#">Careers </a>
+                                </li>
+                                <li class="text-sm text-white hover:underline">
+                                    <a href="#">Careers </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="w-full sm:h-[110px] h-fit py-10 sm:py-0 bg-[#232F3E] flex sm:flex-row flex-col justify-center items-center px-2">
+                <div class="sm:mr-[80px] mb-5 sm:mb-0 flex justify-center">
+                    <!--            logo-->
+                    <img src="./images/logo-2.png" alt="" />
+                </div>
+                <div class="flex sm:flex-row flex-col space-y-1 sm:space-y-0 sm:space-x-1 sm:items-center">
+                    <div class="flex justify-center sm:justify-start group relative">
+                        <style>
+                            .language-item:hover .lang-radio {
+                                display: block !important;
+                            }
+                        </style>
+                        <button type="button"
+                            class="w-[116px] h-[34px] border border-[#848688] rounded text-white text-sm flex items-center pl-[8px] pr-[18px] py-[6px] relative">
+                            <div class="flex space-x-2 items-center">
+                                <img src="./images/world.png" alt="" class="w-[14px] h-[14px]" />
+                                <span>English</span>
+                            </div>
+                            <span class="absolute right-2 top-2.5">
+                                <img src="./images/topBottomArrow.png" alt="" />
+                            </span>
+                        </button>
+                        <div
+                            class="w-0 h-0 border-[9px] border-b-white group-hover:block hidden border-transparent absolute right-[5px] -bottom-[2px] z-30">
+                        </div>
+                        <div
+                            class="w-[240px] group-hover:block hidden bg-white border rounded shadow-xl border border-[#DDD] absolute -left-0 top-[32px] p-4 z-10">
+                            <div class="pb-4 border-b border-gray-200">
+                                <div class="flex items-center space-x-2 mb-3">
+                                    <span class="text-xs font-medium text-[#565959] leading-none">Change language</span>
+                                    <span class="text-[11px] text-[#007185] leading-none">Learn more</span>
+                                </div>
+                                <div class="flex space-x-3 items-center">
+                                    <div
+                                        class="w-[18px] h-[18px] rounded-full border border-gray-300 flex justify-center items-center">
+                                        <div class="w-[8px] h-[8px] bg-[#E87326] rounded-full"></div>
+                                    </div>
+                                    <span class="text-[#0F1111] text-xs leading-none">English - EN</span>
+                                </div>
+                            </div>
+                            <div class="flex flex-col space-y-2 mt-4 pb-4">
+                                <a href="#">
+                                    <div class="language-item flex space-x-3 items-center">
+                                        <div
+                                            class="w-[18px] h-[18px] rounded-full border border-gray-300 flex justify-center items-center">
+                                            <div class="lang-radio w-[8px] h-[8px] bg-[#E87326] rounded-full hidden">
+                                            </div>
+                                        </div>
+                                        <span
+                                            class="text-[#0F1111] hover:text-[#C7511F] hover:underline text-xs leading-none">English
+                                            - EN</span>
+                                    </div>
+                                </a><a href="#">
+                                    <div class="language-item flex space-x-3 items-center">
+                                        <div
+                                            class="w-[18px] h-[18px] rounded-full border border-gray-300 flex justify-center items-center">
+                                            <div class="lang-radio w-[8px] h-[8px] bg-[#E87326] rounded-full hidden">
+                                            </div>
+                                        </div>
+                                        <span
+                                            class="text-[#0F1111] hover:text-[#C7511F] hover:underline text-xs leading-none">English
+                                            - EN</span>
+                                    </div>
+                                </a><a href="#">
+                                    <div class="language-item flex space-x-3 items-center">
+                                        <div
+                                            class="w-[18px] h-[18px] rounded-full border border-gray-300 flex justify-center items-center">
+                                            <div class="lang-radio w-[8px] h-[8px] bg-[#E87326] rounded-full hidden">
+                                            </div>
+                                        </div>
+                                        <span
+                                            class="text-[#0F1111] hover:text-[#C7511F] hover:underline text-xs leading-none">English
+                                            - EN</span>
+                                    </div>
+                                </a><a href="#">
+                                    <div class="language-item flex space-x-3 items-center">
+                                        <div
+                                            class="w-[18px] h-[18px] rounded-full border border-gray-300 flex justify-center items-center">
+                                            <div class="lang-radio w-[8px] h-[8px] bg-[#E87326] rounded-full hidden">
+                                            </div>
+                                        </div>
+                                        <span
+                                            class="text-[#0F1111] hover:text-[#C7511F] hover:underline text-xs leading-none">English
+                                            - EN</span>
+                                    </div>
+                                </a><a href="#">
+                                    <div class="language-item flex space-x-3 items-center">
+                                        <div
+                                            class="w-[18px] h-[18px] rounded-full border border-gray-300 flex justify-center items-center">
+                                            <div class="lang-radio w-[8px] h-[8px] bg-[#E87326] rounded-full hidden">
+                                            </div>
+                                        </div>
+                                        <span
+                                            class="text-[#0F1111] hover:text-[#C7511F] hover:underline text-xs leading-none">English
+                                            - EN</span>
+                                    </div>
+                                </a><a href="#">
+                                    <div class="language-item flex space-x-3 items-center">
+                                        <div
+                                            class="w-[18px] h-[18px] rounded-full border border-gray-300 flex justify-center items-center">
+                                            <div class="lang-radio w-[8px] h-[8px] bg-[#E87326] rounded-full hidden">
+                                            </div>
+                                        </div>
+                                        <span
+                                            class="text-[#0F1111] hover:text-[#C7511F] hover:underline text-xs leading-none">English
+                                            - EN</span>
+                                    </div>
+                                </a><a href="#">
+                                    <div class="language-item flex space-x-3 items-center">
+                                        <div
+                                            class="w-[18px] h-[18px] rounded-full border border-gray-300 flex justify-center items-center">
+                                            <div class="lang-radio w-[8px] h-[8px] bg-[#E87326] rounded-full hidden">
+                                            </div>
+                                        </div>
+                                        <span
+                                            class="text-[#0F1111] hover:text-[#C7511F] hover:underline text-xs leading-none">English
+                                            - EN</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button"
+                        class="w-[150px] h-[34px] border border-[#848688] rounded text-white text-sm flex items-center pl-[8px] pr-[18px] py-[6px] relative">
+                        <div class="flex space-x-2 items-center">
+                            <span> $ </span>
+                            <span>English</span>
+                        </div>
+                    </button>
+                    <button type="button"
+                        class="w-[150px] h-[34px] border border-[#848688] rounded text-white text-sm flex items-center pl-[8px] pr-[18px] py-[6px] relative">
+                        <div class="flex space-x-2 items-center">
+                            <img src="./images/us.png" alt="" class="w-[14px] h-[14px]" />
+                            <span>English</span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section class="w-full py-[30px] bg-[#131A22]">
+            <div class="max-w-[1000px] mb-[30px] mt-0 mx-auto mb lg:block hidden">
+                <div class="grid grid-cols-7 gap-5">
+                    <div>
+                        <div class="mb-[25px]">
+                            <a href="#" class="leading-[75%] group">
+                                <h1 class="text-[11px] font-medium text-white group-hover:underline">
+                                    Amazon Music
+                                </h1>
+                                <span class="text-[10px] text-[#999] inline-block group-hover:underline">Stream
+                                    millions<br />of songs</span>
+                            </a>
+                        </div>
+                        <div class="mb-[25px]">
+                            <a href="#" class="leading-[75%] group">
+                                <h1 class="text-[11px] font-medium text-white group-hover:underline">
+                                    Amazon Music
+                                </h1>
+                                <span class="text-[10px] text-[#999] inline-block group-hover:underline">Stream
+                                    millions<br />of songs</span>
+                            </a>
+                        </div>
+                        <div class="mb-[25px]">
+                            <a href="#" class="leading-[75%] group">
+                                <h1 class="text-[11px] font-medium text-white group-hover:underline">
+                                    Amazon Music
+                                </h1>
+                                <span class="text-[10px] text-[#999] inline-block group-hover:underline">Stream
+                                    millions<br />of songs</span>
+                            </a>
+                        </div>
+                        <div class="mb-[25px]">
+                            <a href="#" class="leading-[75%] group">
+                                <h1 class="text-[11px] font-medium text-white group-hover:underline">
+                                    Amazon Music
+                                </h1>
+                                <span class="text-[10px] text-[#999] inline-block group-hover:underline">Stream
+                                    millions<br />of songs</span>
+                            </a>
+                        </div>
+                        <div class="mb-[25px]">
+                            <a href="#" class="leading-[75%] group">
+                                <h1 class="text-[11px] font-medium text-white group-hover:underline">
+                                    Amazon Music
+                                </h1>
+                                <span class="text-[10px] text-[#999] inline-block group-hover:underline">Stream
+                                    millions<br />of songs</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="mb-[25px]">
+                            <a href="#" class="leading-[75%] group">
+                                <h1 class="text-[11px] font-medium text-white group-hover:underline">
+                                    Amazon Music
+                                </h1>
+                                <span class="text-[10px] text-[#999] inline-block group-hover:underline">Stream
+                                    millions<br />of songs</span>
+                            </a>
+                        </div>
+                        <div class="mb-[25px]">
+                            <a href="#" class="leading-[75%] group">
+                                <h1 class="text-[11px] font-medium text-white group-hover:underline">
+                                    Amazon Music
+                                </h1>
+                                <span class="text-[10px] text-[#999] inline-block group-hover:underline">Stream
+                                    millions<br />of songs</span>
+                            </a>
+                        </div>
+                        <div class="mb-[25px]">
+                            <a href="#" class="leading-[75%] group">
+                                <h1 class="text-[11px] font-medium text-white group-hover:underline">
+                                    Amazon Music
+                                </h1>
+                                <span class="text-[10px] text-[#999] inline-block group-hover:underline">Stream
+                                    millions<br />of songs</span>
+                            </a>
+                        </div>
+                        <div class="mb-[25px]">
+                            <a href="#" class="leading-[75%] group">
+                                <h1 class="text-[11px] font-medium text-white group-hover:underline">
+                                    Amazon Music
+                                </h1>
+                                <span class="text-[10px] text-[#999] inline-block group-hover:underline">Stream
+                                    millions<br />of songs</span>
+                            </a>
+                        </div>
+                        <div class="mb-[25px]">
+                            <a href="#" class="leading-[75%] group">
+                                <h1 class="text-[11px] font-medium text-white group-hover:underline">
+                                    Amazon Music
+                                </h1>
+                                <span class="text-[10px] text-[#999] inline-block group-hover:underline">Stream
+                                    millions<br />of songs</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="mb-[25px]">
+                            <a href="#" class="leading-[75%] group">
+                                <h1 class="text-[11px] font-medium text-white group-hover:underline">
+                                    Amazon Music
+                                </h1>
+                                <span class="text-[10px] text-[#999] inline-block group-hover:underline">Stream
+                                    millions<br />of songs</span>
+                            </a>
+                        </div>
+                        <div class="mb-[25px]">
+                            <a href="#" class="leading-[75%] group">
+                                <h1 class="text-[11px] font-medium text-white group-hover:underline">
+                                    Amazon Music
+                                </h1>
+                                <span class="text-[10px] text-[#999] inline-block group-hover:underline">Stream
+                                    millions<br />of songs</span>
+                            </a>
+                        </div>
+                        <div class="mb-[25px]">
+                            <a href="#" class="leading-[75%] group">
+                                <h1 class="text-[11px] font-medium text-white group-hover:underline">
+                                    Amazon Music
+                                </h1>
+                                <span class="text-[10px] text-[#999] inline-block group-hover:underline">Stream
+                                    millions<br />of songs</span>
+                            </a>
+                        </div>
+                        <div class="mb-[25px]">
+                            <a href="#" class="leading-[75%] group">
+                                <h1 class="text-[11px] font-medium text-white group-hover:underline">
+                                    Amazon Music
+                                </h1>
+                                <span class="text-[10px] text-[#999] inline-block group-hover:underline">Stream
+                                    millions<br />of songs</span>
+                            </a>
+                        </div>
+                        <div class="mb-[25px]">
+                            <a href="#" class="leading-[75%] group">
+                                <h1 class="text-[11px] font-medium text-white group-hover:underline">
+                                    Amazon Music
+                                </h1>
+                                <span class="text-[10px] text-[#999] inline-block group-hover:underline">Stream
+                                    millions<br />of songs</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="mb-[25px]">
+                            <a href="#" class="leading-[75%] group">
+                                <h1 class="text-[11px] font-medium text-white group-hover:underline">
+                                    Amazon Music
+                                </h1>
+                                <span class="text-[10px] text-[#999] inline-block group-hover:underline">Stream
+                                    millions<br />of songs</span>
+                            </a>
+                        </div>
+                        <div class="mb-[25px]">
+                            <a href="#" class="leading-[75%] group">
+                                <h1 class="text-[11px] font-medium text-white group-hover:underline">
+                                    Amazon Music
+                                </h1>
+                                <span class="text-[10px] text-[#999] inline-block group-hover:underline">Stream
+                                    millions<br />of songs</span>
+                            </a>
+                        </div>
+                        <div class="mb-[25px]">
+                            <a href="#" class="leading-[75%] group">
+                                <h1 class="text-[11px] font-medium text-white group-hover:underline">
+                                    Amazon Music
+                                </h1>
+                                <span class="text-[10px] text-[#999] inline-block group-hover:underline">Stream
+                                    millions<br />of songs</span>
+                            </a>
+                        </div>
+                        <div class="mb-[25px]">
+                            <a href="#" class="leading-[75%] group">
+                                <h1 class="text-[11px] font-medium text-white group-hover:underline">
+                                    Amazon Music
+                                </h1>
+                                <span class="text-[10px] text-[#999] inline-block group-hover:underline">Stream
+                                    millions<br />of songs</span>
+                            </a>
+                        </div>
+                        <div class="mb-[25px]">
+                            <a href="#" class="leading-[75%] group">
+                                <h1 class="text-[11px] font-medium text-white group-hover:underline">
+                                    Amazon Music
+                                </h1>
+                                <span class="text-[10px] text-[#999] inline-block group-hover:underline">Stream
+                                    millions<br />of songs</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="mb-[25px]">
+                            <a href="#" class="leading-[75%] group">
+                                <h1 class="text-[11px] font-medium text-white group-hover:underline">
+                                    Amazon Music
+                                </h1>
+                                <span class="text-[10px] text-[#999] inline-block group-hover:underline">Stream
+                                    millions<br />of songs</span>
+                            </a>
+                        </div>
+                        <div class="mb-[25px]">
+                            <a href="#" class="leading-[75%] group">
+                                <h1 class="text-[11px] font-medium text-white group-hover:underline">
+                                    Amazon Music
+                                </h1>
+                                <span class="text-[10px] text-[#999] inline-block group-hover:underline">Stream
+                                    millions<br />of songs</span>
+                            </a>
+                        </div>
+                        <div class="mb-[25px]">
+                            <a href="#" class="leading-[75%] group">
+                                <h1 class="text-[11px] font-medium text-white group-hover:underline">
+                                    Amazon Music
+                                </h1>
+                                <span class="text-[10px] text-[#999] inline-block group-hover:underline">Stream
+                                    millions<br />of songs</span>
+                            </a>
+                        </div>
+                        <div class="mb-[25px]">
+                            <a href="#" class="leading-[75%] group">
+                                <h1 class="text-[11px] font-medium text-white group-hover:underline">
+                                    Amazon Music
+                                </h1>
+                                <span class="text-[10px] text-[#999] inline-block group-hover:underline">Stream
+                                    millions<br />of songs</span>
+                            </a>
+                        </div>
+                        <div class="mb-[25px]">
+                            <a href="#" class="leading-[75%] group">
+                                <h1 class="text-[11px] font-medium text-white group-hover:underline">
+                                    Amazon Music
+                                </h1>
+                                <span class="text-[10px] text-[#999] inline-block group-hover:underline">Stream
+                                    millions<br />of songs</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="mb-[25px]">
+                            <a href="#" class="leading-[75%] group">
+                                <h1 class="text-[11px] font-medium text-white group-hover:underline">
+                                    Amazon Music
+                                </h1>
+                                <span class="text-[10px] text-[#999] inline-block group-hover:underline">Stream
+                                    millions<br />of songs</span>
+                            </a>
+                        </div>
+                        <div class="mb-[25px]">
+                            <a href="#" class="leading-[75%] group">
+                                <h1 class="text-[11px] font-medium text-white group-hover:underline">
+                                    Amazon Music
+                                </h1>
+                                <span class="text-[10px] text-[#999] inline-block group-hover:underline">Stream
+                                    millions<br />of songs</span>
+                            </a>
+                        </div>
+                        <div class="mb-[25px]">
+                            <a href="#" class="leading-[75%] group">
+                                <h1 class="text-[11px] font-medium text-white group-hover:underline">
+                                    Amazon Music
+                                </h1>
+                                <span class="text-[10px] text-[#999] inline-block group-hover:underline">Stream
+                                    millions<br />of songs</span>
+                            </a>
+                        </div>
+                        <div class="mb-[25px]">
+                            <a href="#" class="leading-[75%] group">
+                                <h1 class="text-[11px] font-medium text-white group-hover:underline">
+                                    Amazon Music
+                                </h1>
+                                <span class="text-[10px] text-[#999] inline-block group-hover:underline">Stream
+                                    millions<br />of songs</span>
+                            </a>
+                        </div>
+                        <div class="mb-[25px]">
+                            <a href="#" class="leading-[75%] group">
+                                <h1 class="text-[11px] font-medium text-white group-hover:underline">
+                                    Amazon Music
+                                </h1>
+                                <span class="text-[10px] text-[#999] inline-block group-hover:underline">Stream
+                                    millions<br />of songs</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="mb-[25px]">
+                            <a href="#" class="leading-[75%] group">
+                                <h1 class="text-[11px] font-medium text-white group-hover:underline">
+                                    Amazon Music
+                                </h1>
+                                <span class="text-[10px] text-[#999] inline-block group-hover:underline">Stream
+                                    millions<br />of songs</span>
+                            </a>
+                        </div>
+                        <div class="mb-[25px]">
+                            <a href="#" class="leading-[75%] group">
+                                <h1 class="text-[11px] font-medium text-white group-hover:underline">
+                                    Amazon Music
+                                </h1>
+                                <span class="text-[10px] text-[#999] inline-block group-hover:underline">Stream
+                                    millions<br />of songs</span>
+                            </a>
+                        </div>
+                        <div class="mb-[25px]">
+                            <a href="#" class="leading-[75%] group">
+                                <h1 class="text-[11px] font-medium text-white group-hover:underline">
+                                    Amazon Music
+                                </h1>
+                                <span class="text-[10px] text-[#999] inline-block group-hover:underline">Stream
+                                    millions<br />of songs</span>
+                            </a>
+                        </div>
+                        <div class="mb-[25px]">
+                            <a href="#" class="leading-[75%] group">
+                                <h1 class="text-[11px] font-medium text-white group-hover:underline">
+                                    Amazon Music
+                                </h1>
+                                <span class="text-[10px] text-[#999] inline-block group-hover:underline">Stream
+                                    millions<br />of songs</span>
+                            </a>
+                        </div>
+                        <div class="mb-[25px]">
+                            <a href="#" class="leading-[75%] group">
+                                <h1 class="text-[11px] font-medium text-white group-hover:underline">
+                                    Amazon Music
+                                </h1>
+                                <span class="text-[10px] text-[#999] inline-block group-hover:underline">Stream
+                                    millions<br />of songs</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full flex justify-center items-center">
+                <div>
+                    <div>
+                        <ul class="flex space-x-5 items-center">
+                            <li class="text-xs font-medium text-white hover:underline">
+                                <a href="#">Conditions of Use</a>
+                            </li>
+                            <li class="text-xs font-medium text-white hover:underline">
+                                <a href="#">Privacy notice</a>
+                            </li>
+                            <li class="text-xs font-medium text-white hover:underline">
+                                <a href="#">Interest-Based Ads</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <p class="text-xs font-medium text-white text-center">
+                        © 1996-2022, Amazon.com, Inc. or its affiliates
+                    </p>
+                </div>
+            </div>
+        </section>
+    </footer>
+</body>
+
+</html>
