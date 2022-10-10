@@ -1230,7 +1230,7 @@
         class="w-full"
       >
         <div class="container mx-auto">
-          <div class="w-full flex space-x-[30px]">
+          <div class="w-full flex space-x-[30px] pb-[30px] border-b">
             <div class="flex-1 flex space-x-[30px]">
               <div class="w-[595px] flex h-[460px]">
                 <div class="w-[45px] h-full flex flex-col space-y-2">
@@ -1482,112 +1482,1079 @@
                   </template>
                 </div>
                 <div class="flex space-x-1 mb-2">
-                    <span class="text-sm text-[#007185] hover:underline hover:text-thover">Size Chart</span>
-                    <span>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16">
-                            <path fill="none" d="M0 0h24v24H0z" />
-                            <path d="M12 15l-4.243-4.243 1.415-1.414L12 12.172l2.828-2.829 1.415 1.414z" />
-                        </svg>
-                    </span>
+                  <span
+                    class="text-sm text-[#007185] hover:underline hover:text-thover"
+                    >Size Chart</span
+                  >
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      width="16"
+                      height="16"
+                    >
+                      <path fill="none" d="M0 0h24v24H0z" />
+                      <path
+                        d="M12 15l-4.243-4.243 1.415-1.414L12 12.172l2.828-2.829 1.415 1.414z"
+                      />
+                    </svg>
+                  </span>
                 </div>
-                <div class="w-full" x-data="{
+                <div
+                  class="w-full"
+                  x-data="{
                     seeMore:false,
                     seeMoreHandler:function(){
                         this.seeMore = !this.seeMore;
                     }
-                }">
-                   <div :class="seeMore?'max-h-auto':'max-h-[105px] '" class="w-full overflow-hidden">
-                    <h1 class="text-base font-bold text-tblack mb-3">Product Details</h1>
+                }"
+                >
+                  <div
+                    :class="seeMore?'max-h-auto':'max-h-[105px] '"
+                    class="w-full overflow-hidden"
+                  >
+                    <h1 class="text-base font-bold text-tblack mb-3">
+                      Product Details
+                    </h1>
                     <table class="pb-3 border-b w-full block mb-3">
-                        <tr>
-                            <td class="text-sm text-tblack font-bold w-[165px]">Fabric Type</td>
-                            <td class="text-sm text-tblack">100% Synthetic</td>
-                        </tr>
-                        <tr>
-                            <td class="text-sm text-tblack font-bold w-[165px]">Fabric Type</td>
-                            <td class="text-sm text-tblack">100% Synthetic</td>
-                        </tr>
-                        <tr>
-                            <td class="text-sm text-tblack font-bold w-[165px]">Fabric Type</td>
-                            <td class="text-sm text-tblack">100% Synthetic</td>
-                        </tr>
-                        <tr>
-                            <td class="text-sm text-tblack font-bold w-[165px]">Fabric Type</td>
-                            <td class="text-sm text-tblack">100% Synthetic</td>
-                        </tr>
+                      <tr>
+                        <td class="text-sm text-tblack font-bold w-[165px]">
+                          Fabric Type:
+                        </td>
+                        <td class="text-sm text-tblack">100% Synthetic</td>
+                      </tr>
+                      <tr>
+                        <td class="text-sm text-tblack font-bold w-[165px]">
+                          Fabric Type:
+                        </td>
+                        <td class="text-sm text-tblack">100% Synthetic</td>
+                      </tr>
+                      <tr>
+                        <td class="text-sm text-tblack font-bold w-[165px]">
+                          Fabric Type:
+                        </td>
+                        <td class="text-sm text-tblack">100% Synthetic</td>
+                      </tr>
+                      <tr>
+                        <td class="text-sm text-tblack font-bold w-[165px]">
+                          Fabric Type:
+                        </td>
+                        <td class="text-sm text-tblack">100% Synthetic</td>
+                      </tr>
                     </table>
-                    <h1 class="text-base font-bold text-tblack mb-3">About this Item</h1>
+                    <h1 class="text-base font-bold text-tblack mb-3">
+                      About this Item
+                    </h1>
                     <div class="w-full pb-3 border-b mb-3">
-                        <ul class="list-disc ml-4">
-                            <li class="text-sm text-[#565959]">Nike Swoosh, Lifestyle</li>
-                        </ul>
+                      <ul class="list-disc ml-4">
+                        <li class="text-sm text-[#565959]">
+                          Nike Swoosh, Lifestyle
+                        </li>
+                      </ul>
                     </div>
-                    <h1 class="text-base font-bold text-tblack mb-3">Description</h1>
+                    <h1 class="text-base font-bold text-tblack mb-3">
+                      Description
+                    </h1>
                     <div class="w-full pb-3">
-                        <p class="text-sm text-[#565959]">The Pegasus continues to amaze: increased technical content and Stellar comfort.
-                        </p>
+                      <p class="text-sm text-[#565959]">
+                        The Pegasus continues to amaze: increased technical
+                        content and Stellar comfort.
+                      </p>
                     </div>
-                   </div>
-                    <button type="button" @click="seeMoreHandler()">
-                        <template x-cloak x-if="seeMore">
-                           <div  class="flex space-x-1 mb-2">
-                            <span class="transform rotate-180">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16">
-                                    <path fill="none" d="M0 0h24v24H0z" />
-                                    <path d="M12 15l-4.243-4.243 1.415-1.414L12 12.172l2.828-2.829 1.415 1.414z" />
-                                </svg>
-                            </span>
-                            <span class="text-sm text-[#007185] hover:underline hover:text-thover font-medium">See less</span>
-                           </div>
-                        </template>
-                        <template x-cloak x-if="!seeMore">
-                            <div  class="flex space-x-1 mb-2">
-                                <span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16">
-                                        <path fill="none" d="M0 0h24v24H0z" />
-                                        <path d="M12 15l-4.243-4.243 1.415-1.414L12 12.172l2.828-2.829 1.415 1.414z" />
-                                    </svg>
-                                </span>
-                                <span class="text-sm text-[#007185] hover:underline hover:text-thover font-medium">See more</span>
-                            </div>
-                           
-                        </template>
-                        
-                    </button>
-
+                  </div>
+                  <button type="button" @click="seeMoreHandler()">
+                    <template x-cloak x-if="seeMore">
+                      <div class="flex space-x-1 mb-2">
+                        <span class="transform rotate-180">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            width="16"
+                            height="16"
+                          >
+                            <path fill="none" d="M0 0h24v24H0z" />
+                            <path
+                              d="M12 15l-4.243-4.243 1.415-1.414L12 12.172l2.828-2.829 1.415 1.414z"
+                            />
+                          </svg>
+                        </span>
+                        <span
+                          class="text-sm text-[#007185] hover:underline hover:text-thover font-medium"
+                          >See less</span
+                        >
+                      </div>
+                    </template>
+                    <template x-cloak x-if="!seeMore">
+                      <div class="flex space-x-1 mb-2">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            width="16"
+                            height="16"
+                          >
+                            <path fill="none" d="M0 0h24v24H0z" />
+                            <path
+                              d="M12 15l-4.243-4.243 1.415-1.414L12 12.172l2.828-2.829 1.415 1.414z"
+                            />
+                          </svg>
+                        </span>
+                        <span
+                          class="text-sm text-[#007185] hover:underline hover:text-thover font-medium"
+                          >See more</span
+                        >
+                      </div>
+                    </template>
+                  </button>
                 </div>
               </div>
             </div>
             <div class="w-[245px]">
-                <div class="w-full border border-[#D5D9D9] rounded-lg h-[143px] px-[18px] py-[14px] mb-3">
-                    <div class="w-full pb-3 mb-3 border-b">
-                        <p class="text-sm text-tblack text-center">To buy, select <span class="font-bold"> Size</span></p>
-                        <div class="w-full flex justify-center">
-                            <button type="button" class="w-full h-[30px] text-sm text-tblack bg-[#F7CA00] rounded-full mt-2">
-                                Add to Cart
-                            </button>
-                        </div>
+              <div
+                class="w-full border border-[#D5D9D9] rounded-lg h-[143px] px-[18px] py-[14px] mb-3"
+              >
+                <div class="w-full pb-3 mb-3 border-b">
+                  <p class="text-sm text-tblack text-center">
+                    To buy, select <span class="font-bold"> Size</span>
+                  </p>
+                  <div class="w-full flex justify-center">
+                    <button
+                      type="button"
+                      class="w-full h-[30px] text-sm text-tblack bg-[#F7CA00] rounded-full mt-2"
+                    >
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+                <a href="#">
+                  <div
+                    class="w-full h-[30px] rounded border border-gray-400 bg-[#EBEDF0] pl-3 text-sm flex items-center"
+                  >
+                    Add to List
+                  </div>
+                </a>
+              </div>
+              <div>
+                <p
+                  class="text-xs text-[#0F1111] text-center font-medium mb-[2px]"
+                >
+                  Have one to sell?
+                </p>
+                <div class="flex justify-center">
+                  <a href="#">
+                    <div
+                      class="w-[112px] h-[29px] rounded-lg text-sm font-medium text-gray-500 border shadow-lg flex justify-center items-center"
+                    >
+                      Sell on Amazon
                     </div>
-                    <a href="#">
-                        <div class="w-full h-[30px] rounded border border-gray-400 bg-[#EBEDF0] pl-3 text-sm flex items-center">
-                            Add to List
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container mx-auto py-[30px] border-b">
+          <h1 class="text-[24px] font-bold text-tblack mb-3">
+            Product Details
+          </h1>
+          <table class="pb-3 w-full block mb-3 ml-5">
+            <tr>
+              <td class="text-sm text-tblack font-bold">Fabric Type:</td>
+              <td class="text-sm text-tblack">100% Synthetic</td>
+            </tr>
+            <tr>
+              <td class="text-sm text-tblack font-bold">Fabric Type:</td>
+              <td class="text-sm text-tblack">100% Synthetic</td>
+            </tr>
+            <tr>
+              <td class="text-sm text-tblack font-bold">Fabric Type:</td>
+              <td class="text-sm text-tblack">100% Synthetic</td>
+            </tr>
+            <tr>
+              <td class="text-sm text-tblack font-bold">Customer Reviews:</td>
+              <td class="text-sm text-tblack">
+                <div
+                  class="xl:inline-flex hidden items-center py-1 group relative cursor-pointer"
+                >
+                  <div class="flex">
+                    <img src="./images/starfull.png" alt="" />
+                    <img src="./images/starfull.png" alt="" />
+                    <img src="./images/starfull.png" alt="" />
+                    <img src="./images/starfull.png" alt="" />
+                    <img src="./images/starhalf.png" alt="" />
+                  </div>
+                  <span class="text-[#565959]">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      width="20"
+                      height="20"
+                      class="fill-current"
+                    >
+                      <path
+                        d="M12 15l-4.243-4.243 1.415-1.414L12 12.172l2.828-2.829 1.415 1.414z"
+                      ></path>
+                    </svg>
+                  </span>
+                  <span class="text-sm text-[#007185] leading-none"
+                    >18,858</span
+                  >
+                  <div
+                    class="w-[338px] h-[326px] group-hover:block hidden bg-white shadow-lg absolute -left-[70px] top-7 z-30 border border-[#cdcdcd] p-5"
+                  >
+                    <div class="flex items-center space-x-2 mb-3">
+                      <div class="flex">
+                        <img src="./images/starfull.png" alt="" />
+                        <img src="./images/starfull.png" alt="" />
+                        <img src="./images/starfull.png" alt="" />
+                        <img src="./images/starfull.png" alt="" />
+                        <img src="./images/starhalf.png" alt="" />
+                      </div>
+                      <span class="texr-lg text-[#0F1111] font-bold"
+                        >3 out of 5</span
+                      >
+                    </div>
+                    <p class="text-[#565959] text-sm mb-3">1 global rating</p>
+                    <div class="flex flex-col space-y-4 pb-4 border-b">
+                      <div class="flex justify-between items-center">
+                        <span class="text-[#007185] text-sm"> 5 star</span>
+                        <div
+                          class="w-[197px] h-5 bg-[#F0F2F2] overflow-hidden rounded border"
+                        >
+                          <div
+                            class="w-full h-full bg-[#FFA41C]"
+                            style="width: 50%"
+                          ></div>
                         </div>
+                        <span class="text-[#007185] text-sm"> 50%</span>
+                      </div>
+                      <div class="flex justify-between items-center">
+                        <span class="text-[#007185] text-sm"> 4 star</span>
+                        <div
+                          class="w-[197px] h-5 bg-[#F0F2F2] overflow-hidden rounded border"
+                        >
+                          <div
+                            class="w-full h-full bg-[#FFA41C]"
+                            style="width: 50%"
+                          ></div>
+                        </div>
+                        <span class="text-[#007185] text-sm"> 50%</span>
+                      </div>
+                      <div class="flex justify-between items-center">
+                        <span class="text-[#007185] text-sm"> 3 star</span>
+                        <div
+                          class="w-[197px] h-5 bg-[#F0F2F2] overflow-hidden rounded border"
+                        >
+                          <div
+                            class="w-full h-full bg-[#FFA41C]"
+                            style="width: 0%"
+                          ></div>
+                        </div>
+                        <span class="text-[#007185] text-sm"> 0%</span>
+                      </div>
+                      <div class="flex justify-between items-center">
+                        <span class="text-[#007185] text-sm"> 2 star</span>
+                        <div
+                          class="w-[197px] h-5 bg-[#F0F2F2] overflow-hidden rounded border"
+                        >
+                          <div
+                            class="w-full h-full bg-[#FFA41C]"
+                            style="width: 0%"
+                          ></div>
+                        </div>
+                        <span class="text-[#007185] text-sm"> 0%</span>
+                      </div>
+                      <div class="flex justify-between items-center">
+                        <span class="text-[#007185] text-sm"> 1 star</span>
+                        <div
+                          class="w-[197px] h-5 bg-[#F0F2F2] overflow-hidden rounded border"
+                        >
+                          <div
+                            class="w-full h-full bg-[#FFA41C]"
+                            style="width: 0%"
+                          ></div>
+                        </div>
+                        <span class="text-[#007185] text-sm"> 0%</span>
+                      </div>
+                    </div>
+                    <div class="flex py-[14px] justify-center">
+                      <a href="#">
+                        <div
+                          class="flex text-[#007185] hover:underline hover:text-[#C7511F]"
+                        >
+                          See all customer reviews
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </section>
+      <section>
+        <div class="container mx-auto py-[30px] border-b">
+            <h1 class="text-[24px] font-bold text-tblack mb-6">
+            Customer questions & answers
+            </h1>
+            <div class="w-[800px] relative mb-5">
+              <input placeholder="Search in reviews, Q&A..." type="text" class="w-full h-[30px] bg-white border border-gray-400 focus:ring-[#007185] focus:ring-1 rounded pl-[30px] focus:outline-none placeholder:text-sm"/>
+              <span class="absolute left-1 top-1.5">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                  class="w-5 h-5">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"></path>
+                </svg>
+              </span>
+            </div>
+            <div class="flex flex-col space-y-1">
+              <div class="item flex ">
+                <div class="w-[64px] flex justify-center border-r-2">
+                  <div class="w-full flex flex-col items-center space-y-2.5">
+                    <div class="group cursor-pointer">
+                     <img class="group-hover:hidden block" src="./images/vote.png" alt="">
+                    <img class="group-hover:block hidden" src="./images/vote2.png" alt="">
+                    </div>
+                    <p class="text-sm text-tblack leading-none">1</p>
+                    <p class="text-sm text-tblack leading-none">vote</p>
+                    <div class="group cursor-pointer">
+                      <img class="group-hover:hidden block transform rotate-180" src="./images/vote.png" alt="">
+                      <img class="group-hover:block hidden transform rotate-180" src="./images/vote2.png" alt="">
+                    </div>
+                  </div>
+                </div>
+                <div class="flex-1 pl-2">
+                  <div class="flex w-full">
+                    <div class="w-[100px]">
+                      <span class="text-sm font-bold text-tblack">Question:</span>
+                    </div>
+                    <div>
+                      <span class="text-[#007185] hover:underline hover:text-thover">Are these shoes wide width?</span>
+                    </div>
+                  </div>
+                  <div class="flex w-full">
+                    <div class="w-[100px]">
+                      <span class="text-sm font-bold text-tblack">Answer:</span>
+                    </div>
+                    <!-- vote -->
+                    <div  x-data="{
+                      seeMore:false,
+                      seeMoreHandler:function(){
+                        this.seeMore=!this.seeMore;
+                      }
+                    }" >
+                    <div :class="seeMore?'h-auto':'h-[40px]'" class="flex flex-col space-y-2 overflow-hidden">
+                      <div class="">
+                        <p class="text-sm text-tblack">I would say the width is medium. I have narrow feet and need to cinch them up for my
+                          feet
+                          but they fit well.</p>
+                        <p class="text-sm text-[#565959]">By Monkey on December 18, 2019</p>
+                      </div>
+                      <div>
+                        <p class="text-sm text-tblack">I would say the width is medium. I have narrow feet and need to cinch them up for my
+                          feet
+                          but they fit well.</p>
+                        <p class="text-sm text-[#565959]">By Monkey on December 18, 2019</p>
+                      </div>
+                      <div>
+                        <p class="text-sm text-tblack">I would say the width is medium. I have narrow feet and need to cinch them up for my
+                          feet
+                          but they fit well.</p>
+                        <p class="text-sm text-[#565959]">By Monkey on December 18, 2019</p>
+                      </div>
+                    </div>
+                      <div @click="seeMoreHandler()" class=" flex space-x-1 mb-2 items-center cursor-pointer">
+                        <span :class="seeMore?'rotate-180':'rotate-0'" class="transform">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+                            <path fill="none" d="M0 0h24v24H0z"></path>
+                            <path d="M12 15l-4.243-4.243 1.415-1.414L12 12.172l2.828-2.829 1.415 1.414z"></path>
+                          </svg>
+                        </span>
+                        <span class="text-sm text-[#007185] hover:underline hover:text-thover">See
+                          <template x-cloak x-if="seeMore">
+                            <span>Less</span>
+                          </template>
+                          <template x-cloak x-if="!seeMore">
+                            <span>More</span>
+                          </template>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item flex ">
+                <div class="w-[64px] flex justify-center border-r-2">
+                  <div class="w-full flex flex-col items-center space-y-2.5">
+                    <div class="group cursor-pointer">
+                      <img class="group-hover:hidden block" src="./images/vote.png" alt="">
+                      <img class="group-hover:block hidden" src="./images/vote2.png" alt="">
+                    </div>
+                    <p class="text-sm text-tblack leading-none">1</p>
+                    <p class="text-sm text-tblack leading-none">vote</p>
+                    <div class="group cursor-pointer">
+                      <img class="group-hover:hidden block transform rotate-180" src="./images/vote.png" alt="">
+                      <img class="group-hover:block hidden transform rotate-180" src="./images/vote2.png" alt="">
+                    </div>
+                  </div>
+                </div>
+                <div class="flex-1 pl-2">
+                  <div class="flex w-full">
+                    <div class="w-[100px]">
+                      <span class="text-sm font-bold text-tblack">Question:</span>
+                    </div>
+                    <div>
+                      <span class="text-[#007185] hover:underline hover:text-thover">Are these shoes wide width?</span>
+                    </div>
+                  </div>
+                  <div class="flex w-full">
+                    <div class="w-[100px]">
+                      <span class="text-sm font-bold text-tblack">Answer:</span>
+                    </div>
+                    <!-- vote -->
+                    <div x-data="{
+                                    seeMore:false,
+                                    seeMoreHandler:function(){
+                                      this.seeMore=!this.seeMore;
+                                    }
+                                  }">
+                      <div :class="seeMore?'h-auto':'h-[40px]'" class="flex flex-col space-y-2 overflow-hidden">
+                        <div class="">
+                          <p class="text-sm text-tblack">I would say the width is medium. I have narrow feet and need to cinch them up
+                            for my
+                            feet
+                            but they fit well.</p>
+                          <p class="text-sm text-[#565959]">By Monkey on December 18, 2019</p>
+                        </div>
+                        <div>
+                          <p class="text-sm text-tblack">I would say the width is medium. I have narrow feet and need to cinch them up
+                            for my
+                            feet
+                            but they fit well.</p>
+                          <p class="text-sm text-[#565959]">By Monkey on December 18, 2019</p>
+                        </div>
+                        <div>
+                          <p class="text-sm text-tblack">I would say the width is medium. I have narrow feet and need to cinch them up
+                            for my
+                            feet
+                            but they fit well.</p>
+                          <p class="text-sm text-[#565959]">By Monkey on December 18, 2019</p>
+                        </div>
+                      </div>
+                      <div @click="seeMoreHandler()" class=" flex space-x-1 mb-2 items-center cursor-pointer">
+                        <span :class="seeMore?'rotate-180':'rotate-0'" class="transform">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+                            <path fill="none" d="M0 0h24v24H0z"></path>
+                            <path d="M12 15l-4.243-4.243 1.415-1.414L12 12.172l2.828-2.829 1.415 1.414z"></path>
+                          </svg>
+                        </span>
+                        <span class="text-sm text-[#007185] hover:underline hover:text-thover">See
+                          <template x-cloak x-if="seeMore">
+                            <span>Less</span>
+                          </template>
+                          <template x-cloak x-if="!seeMore">
+                            <span>More</span>
+                          </template>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item flex ">
+                <div class="w-[64px] flex justify-center border-r-2">
+                  <div class="w-full flex flex-col items-center space-y-2.5">
+                    <div class="group cursor-pointer">
+                      <img class="group-hover:hidden block" src="./images/vote.png" alt="">
+                      <img class="group-hover:block hidden" src="./images/vote2.png" alt="">
+                    </div>
+                    <p class="text-sm text-tblack leading-none">1</p>
+                    <p class="text-sm text-tblack leading-none">vote</p>
+                    <div class="group cursor-pointer">
+                      <img class="group-hover:hidden block transform rotate-180" src="./images/vote.png" alt="">
+                      <img class="group-hover:block hidden transform rotate-180" src="./images/vote2.png" alt="">
+                    </div>
+                  </div>
+                </div>
+                <div class="flex-1 pl-2">
+                  <div class="flex w-full">
+                    <div class="w-[100px]">
+                      <span class="text-sm font-bold text-tblack">Question:</span>
+                    </div>
+                    <div>
+                      <span class="text-[#007185] hover:underline hover:text-thover">Are these shoes wide width?</span>
+                    </div>
+                  </div>
+                  <div class="flex w-full">
+                    <div class="w-[100px]">
+                      <span class="text-sm font-bold text-tblack">Answer:</span>
+                    </div>
+                    <!-- vote -->
+                    <div x-data="{
+                                    seeMore:false,
+                                    seeMoreHandler:function(){
+                                      this.seeMore=!this.seeMore;
+                                    }
+                                  }">
+                      <div :class="seeMore?'h-auto':'h-[40px]'" class="flex flex-col space-y-2 overflow-hidden">
+                        <div class="">
+                          <p class="text-sm text-tblack">I would say the width is medium. I have narrow feet and need to cinch them up
+                            for my
+                            feet
+                            but they fit well.</p>
+                          <p class="text-sm text-[#565959]">By Monkey on December 18, 2019</p>
+                        </div>
+                        <div>
+                          <p class="text-sm text-tblack">I would say the width is medium. I have narrow feet and need to cinch them up
+                            for my
+                            feet
+                            but they fit well.</p>
+                          <p class="text-sm text-[#565959]">By Monkey on December 18, 2019</p>
+                        </div>
+                        <div>
+                          <p class="text-sm text-tblack">I would say the width is medium. I have narrow feet and need to cinch them up
+                            for my
+                            feet
+                            but they fit well.</p>
+                          <p class="text-sm text-[#565959]">By Monkey on December 18, 2019</p>
+                        </div>
+                      </div>
+                      <div @click="seeMoreHandler()" class=" flex space-x-1 mb-2 items-center cursor-pointer">
+                        <span :class="seeMore?'rotate-180':'rotate-0'" class="transform">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+                            <path fill="none" d="M0 0h24v24H0z"></path>
+                            <path d="M12 15l-4.243-4.243 1.415-1.414L12 12.172l2.828-2.829 1.415 1.414z"></path>
+                          </svg>
+                        </span>
+                        <span class="text-sm text-[#007185] hover:underline hover:text-thover">See
+                          <template x-cloak x-if="seeMore">
+                            <span>Less</span>
+                          </template>
+                          <template x-cloak x-if="!seeMore">
+                            <span>More</span>
+                          </template>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </section>
+      <section>
+        <div class="container mx-auto py-[30px]">
+          <div class="w-full flex space-x-[150px]">
+            <div class="w-[300px]">
+              <h1 class="text-xl font-bold">Customer reviews</h1>
+              <div class="w-full bg-white z-30">
+                <div class="flex items-center space-x-2 mb-3">
+                  <div class="flex">
+                    <img src="./images/starfull.png" alt="" />
+                    <img src="./images/starfull.png" alt="" />
+                    <img src="./images/starfull.png" alt="" />
+                    <img src="./images/starfull.png" alt="" />
+                    <img src="./images/starhalf.png" alt="" />
+                  </div>
+                  <span class="texr-lg text-[#0F1111] font-bold"
+                    >3 out of 5</span
+                  >
+                </div>
+                <p class="text-[#565959] text-sm mb-3">1 global rating</p>
+                <div class="flex flex-col space-y-4 pb-[30px] border-b">
+                  <div class="flex justify-between items-center">
+                    <span class="text-[#007185] text-sm"> 5 star</span>
+                    <div
+                      class="w-[197px] h-5 bg-[#F0F2F2] overflow-hidden rounded border"
+                    >
+                      <div
+                        class="w-full h-full bg-[#FFA41C]"
+                        style="width: 50%"
+                      ></div>
+                    </div>
+                    <span class="text-[#007185] text-sm"> 50%</span>
+                  </div>
+                  <div class="flex justify-between items-center">
+                    <span class="text-[#007185] text-sm"> 4 star</span>
+                    <div
+                      class="w-[197px] h-5 bg-[#F0F2F2] overflow-hidden rounded border"
+                    >
+                      <div
+                        class="w-full h-full bg-[#FFA41C]"
+                        style="width: 50%"
+                      ></div>
+                    </div>
+                    <span class="text-[#007185] text-sm"> 50%</span>
+                  </div>
+                  <div class="flex justify-between items-center">
+                    <span class="text-[#007185] text-sm"> 3 star</span>
+                    <div
+                      class="w-[197px] h-5 bg-[#F0F2F2] overflow-hidden rounded border"
+                    >
+                      <div
+                        class="w-full h-full bg-[#FFA41C]"
+                        style="width: 0%"
+                      ></div>
+                    </div>
+                    <span class="text-[#007185] text-sm"> 0%</span>
+                  </div>
+                  <div class="flex justify-between items-center">
+                    <span class="text-[#007185] text-sm"> 2 star</span>
+                    <div
+                      class="w-[197px] h-5 bg-[#F0F2F2] overflow-hidden rounded border"
+                    >
+                      <div
+                        class="w-full h-full bg-[#FFA41C]"
+                        style="width: 0%"
+                      ></div>
+                    </div>
+                    <span class="text-[#007185] text-sm"> 0%</span>
+                  </div>
+                  <div class="flex justify-between items-center">
+                    <span class="text-[#007185] text-sm"> 1 star</span>
+                    <div
+                      class="w-[197px] h-5 bg-[#F0F2F2] overflow-hidden rounded border"
+                    >
+                      <div
+                        class="w-full h-full bg-[#FFA41C]"
+                        style="width: 0%"
+                      ></div>
+                    </div>
+                    <span class="text-[#007185] text-sm"> 0%</span>
+                  </div>
+                </div>
+              </div>
+              <div class="py-[30px] border-b">
+                <h1 class="text-tblack text-lg font-bold">
+                  Review this product
+                </h1>
+                <p class="text-sm text-tblack mt-1">
+                  Share your thoughts with other customers
+                </p>
+                <a href="#">
+                  <div
+                    class="w-full h-[30px] rounded-lg text-sm text-tblack border shadow-lg flex justify-center items-center mt-5"
+                  >
+                    Write a customer review
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="w-[632px]">
+              <h1 class="text-xl font-bold">Reviews with images</h1>
+              <div class="mb-[30px]">
+                <div class="grid grid-cols-4 gap-2 mt-2">
+                  <div class="item w-full h-[153px]">
+                    <img src="./images/review-img-1.jpg" alt="" />
+                  </div>
+                  <div class="item w-full h-[153px]">
+                    <img src="./images/review-img-1.jpg" alt="" />
+                  </div>
+                  <div class="item w-full h-[153px]">
+                    <img src="./images/review-img-1.jpg" alt="" />
+                  </div>
+                  <div class="item w-full h-[153px]">
+                    <img src="./images/review-img-1.jpg" alt="" />
+                  </div>
+                </div>
+                <div class="mt-1">
+                  <span
+                    class="text-sm text-[#007185] hover:underline hover:text-thover"
+                    >See all customer images</span
+                  >
+                </div>
+              </div>
+              <div class="mb-[30px]">
+                <h1 class="text-xl font-bold">Read reviews that mention</h1>
+                <div class="flex flex-wrap mt-3">
+                   <div>
+                    <a href="#">
+                        <div class="bg-[#D7E8EA] text-sm px-[14px] py-[10px] border-b border-gray-400 mr-[10px] mb-[14px]"> air zoom</div>
+                    </a>
+                   </div>
+                <div>
+                    <a href="#">
+                        <div class="bg-[#D7E8EA] text-sm px-[14px] py-[10px] border-b border-gray-400 mr-[10px] mb-[14px]"> air zoom</div>
                     </a>
                 </div>
                 <div>
-                    <p class="text-xs text-[#0F1111] text-center font-medium mb-[2px]">
-                        Have one to sell?
-                    </p>
-                   <div class="flex justify-center">
                     <a href="#">
-                        <div class="w-[112px] h-[29px] rounded-lg text-sm font-medium text-gray-500 border shadow-lg flex justify-center items-center ">
-                            Sell on Amazon
-                        </div>
+                        <div class="bg-[#D7E8EA] text-sm px-[14px] py-[10px] border-b border-gray-400 mr-[10px] mb-[14px]"> air zoom</div>
                     </a>
-                   </div>
-                    
                 </div>
+                <div>
+                    <a href="#">
+                        <div class="bg-[#D7E8EA] text-sm px-[14px] py-[10px] border-b border-gray-400 mr-[10px] mb-[14px]"> air zoom</div>
+                    </a>
+                </div>
+                <div>
+                    <a href="#">
+                        <div class="bg-[#D7E8EA] text-sm px-[14px] py-[10px] border-b border-gray-400 mr-[10px] mb-[14px]"> air zoom</div>
+                    </a>
+                </div>
+                <div>
+                    <a href="#">
+                        <div class="bg-[#D7E8EA] text-sm px-[14px] py-[10px] border-b border-gray-400 mr-[10px] mb-[14px]"> air zoom</div>
+                    </a>
+                </div>
+                <div>
+                    <a href="#">
+                        <div class="bg-[#D7E8EA] text-sm px-[14px] py-[10px] border-b border-gray-400 mr-[10px] mb-[14px]"> air zoom</div>
+                    </a>
+                </div>
+                <div>
+                    <a href="#">
+                        <div class="bg-[#D7E8EA] text-sm px-[14px] py-[10px] border-b border-gray-400 mr-[10px] mb-[14px]"> air zoom</div>
+                    </a>
+                </div>
+                <div>
+                    <a href="#">
+                        <div class="bg-[#D7E8EA] text-sm px-[14px] py-[10px] border-b border-gray-400 mr-[10px] mb-[14px]"> air zoom</div>
+                    </a>
+                </div>
+                <div>
+                    <a href="#">
+                        <div class="bg-[#D7E8EA] text-sm px-[14px] py-[10px] border-b border-gray-400 mr-[10px] mb-[14px]"> air zoom</div>
+                    </a>
+                </div>
+                <div>
+                    <a href="#">
+                        <div class="bg-[#D7E8EA] text-sm px-[14px] py-[10px] border-b border-gray-400 mr-[10px] mb-[14px]"> air zoom</div>
+                    </a>
+                </div>
+                </div>
+              </div>
+              <div class="mb-[30px]" x-data="{
 
+                open:false,
+                toggle:function(){
+                  this.open=!this.open;
+                },
+                value:'Top reviews',
+                  setValue:function(value){
+                  this.value=value;
+                  this.toggle();
+
+                  },
+                }">
+                <div class="relative">
+                  <button @click="toggle()" type="button"
+                    class="pl-[6px] h-[20px] w-[133px] text-xs bg-[#F0F2F2] inline-flex rounded-lg shadow border border-[#D5D9D9] font-medium text-[#565959] relative">
+                  <span x-text="value"></span>
+                    <span class="absolute right-0 top-0 text-[#565959]">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" class="fill-current">
+                        <path fill="none" d="M0 0h24v24H0z" />
+                        <path d="M12 13.172l4.95-4.95 1.414 1.414L12 16 5.636 9.636 7.05 8.222z" />
+                      </svg>
+                    </span>
+                  </button>
+                  <template x-cloak x-if="open">
+                    <div @click="toggle()" class="w-full h-full fixed left-0 top-0 z-30"></div>
+                  </template>
+                  <template x-cloak x-if="open">
+                    <div class="w-[168px] absolute z-40 h-[142px] bg-white border border-[#cdcdcd] rounded shadow-lg py-2">
+                      <ul>
+                        <li @click="setValue('Top reviews')" class="pl-2 cursor-pointer text-md bg-[#EDFDFF] border-l border-[#007185]">
+                          Top reviews
+                        </li>
+                        <li @click="setValue('Most recent')" class="pl-2 cursor-pointer text-md hover:bg-[#F0F2F2]">
+                          Most recent
+                        </li>
+                      </ul>
+                    </div>
+                  </template>
+                </div>
+              </div>
+              <div class="mb-[30px]">
+                <h1 class="text-xl font-bold mb-3">Top reviews from the United States</h1>
+                <span class="text-sm text-[#007185] hover:underline hover:text-thover cursor-pointer">
+                  Translate all reviews to English
+                </span>
+              </div>
+              <!-- reviews -->
+              <div class="flex flex-col space-y-6">
+                <div class="item">
+                  <div>
+                    <div class="flex space-x-3 items-center">
+                      <div class="w-[34px] h-[34px] rounded-full overflow-hidden">
+                        <img
+                          src="https://images-na.ssl-images-amazon.com/images/W/IMAGERENDERING_521856-T1/images/S/amazon-avatars-global/42fffeb5-ac63-4df3-9abf-6fb5f35f9fdf._CR66,0,367,367_SX48_.jpg"
+                          alt="" class="w-full h-full">
+                      </div>
+                      <span class="text-sm text-tblack">Debeck</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                      <div class="flex">
+                        <img src="./images/starfull.png" alt="">
+                        <img src="./images/starfull.png" alt="">
+                        <img src="./images/starfull.png" alt="">
+                        <img src="./images/starfull.png" alt="">
+                        <img src="./images/starhalf.png" alt="">
+                      </div>
+                      <span class="texr-lg text-[#0F1111] font-bold">OH SO COMFORTABLE!</span>
+                    </div>
+                    <p class="text-sm text-[#565959]">Reviewed in the United States on July 6, 2020</p>
+                    <div class="flex space-x-2 items-center">
+                      <span class="text-sm text-[#565959]">Size: 9</span>
+                      <span class="text-sm text-[#565959]">|</span>
+                      <span class="text-sm text-[#565959]">Color: Multicolour Phantom Bio Beige Barely Volt 2</span>
+                      <span class="text-sm text-[#565959] ">|</span>
+                      <span class="text-sm font-medium text-thover hover:underline cursor-pointer">Verified Purchase</span>
+                    </div>
+                    <div x-data="{
+                      seeMore:false,
+                      seeMoreHandler:function(){
+                        this.seeMore=!this.seeMore;
+                      }
+                    }">
+                      <p :class="seeMore?'h-auto':'h-[275px]'" class="text-sm text-tblack overflow-hidden">
+                        I love running, and I love long distances (favorite racing distances are 10K, 12K, 15K, and half marathons). Back in my
+                        high school track-and-field days, I was fitted and told I need to use a specific line of Brooks for support. Eventually
+                        I evolved to like Saucony; mainly because they were cheaper but also because the fit...worked? After I started
+                        triathlons and Ironmans a few years ago, my miles grew exponentially so I decided to get refitted for a better sneaker
+                        once more. I found the Brooks Ghost at that point and was very pleased for nearly 9-ish months. They were a comfortable
+                        shoe that fit me well, however I found over time, the lack of ankle support really started to take it's toll. FYI, I
+                        change out my shoes roughly every 3-4 months depending on the amount of miles ran. By about last December, I started to
+                        get right foot pain after each run. Instead of looking elsewhere, I bought the next generation of Brooks Ghost. This
+                        seemed to only worsen the lack of ankle support and regular foot pain after longer distances. Finally, in search of
+                        another shoe, I found myself drawn to Nike even though I've never owned a pair of Nikes in my life. RunnersWorld and
+                        Triathlon articles have many suggested brands, and I never thought I'd see the day Nike was in their top 10. I must've
+                        missed how much Nike has changed their line of runners over the past decade; suggesting that their shoes are now more
+                        comfortable and faster. I decided to take a chance with the Air Zoom Pegasus 36. The moment I put these on, they felt
+                        AMAZING! Typically any pair of new running shoes needs some time doing low miles to really break them in, however these
+                        adorable lime green Pegasus felt like they were made for my feet from day one! I should advise, I do have normal to
+                        narrower feet and these fit like a glove. The Pegasus is like a cloud supporting all the right places, springing
+                        comfortably with each stride, and VERY lightweight! I was so surprised at the light feel that I put these on an
+                        ounce/gram scale to compare with my Ghosts. The Pegasus 36 pair weighed in at 478 grams and the Ghost 12 pair weighed in
+                        at 568... a 90g difference! That may not sound like much but when you add miles or do the distance after 90K of biking,
+                        shaving off a few grams can make all the difference. On my first run with these I took them to the track and did 8.5
+                        miles, 6.25 of which at race pace. I got some of my fastest times recorded in a long time on the track that day. And
+                        bonus, no ankle or foot pain! I also did not need to stretch regularly between splits, because my legs felt amazing!
+                        Time will really tell how the Pegasus will hold up against the elements, but to be honest, even if these don't make it
+                        as my new, forever running brand, I would be happy to keep these as an everyday walking shoe. They are OH SO
+                        COMFORTABLE! Today after my run I actually put them back on to wear at work for a 12-hour shift. I can honestly say I
+                        never did that with my Ghosts 11s or 12s. :-)
+                        
+                        I'll report back in a few months to advise how these are holding up. ...maybe by then I'll actually get to run a race in
+                        these?!?!?! *hopes* That is, if Covid-19 ever calms the fudge down!!!!
+                        
+                        Hope y'all stay safe and healthy out there! Cheers!
+                        
+                        ***5 month update***** I still love the Nike Pegasus 36. Since July I purchased a 2nd pair in pink/black in order to
+                        alternate wear. The shoes still feel as comfortable as ever. I have even been able to run two Covid-approved races since
+                        October (a 10K and Half Marathon) where I placed 1st place overall female in both! However, I discovered that while I
+                        love the light-weight and energy transfer from the Pegasus, I am a greater fan of them with in shorter distances. When
+                        reaching the 13 mile mark, my joints feel as those they could use more stability. In a 10K, the Pegasus worked
+                        fantastic! I compared a half marathon solo run with the Pegasus then did the same with my old Brooks Ghost. While the
+                        Brooks still caused a few blisters and foot pain, my knees and poster kept better than with the Pegasus. I've learned
+                        that sometimes too much cushion with less structure can cause more work for the body to maneuver between stride (for me
+                        at least). I am still a complete fan of the Pegasus and will continue to use them in training and DEFINITELY for any
+                        races shorter than 13.1 miles. However, I am now on the hunt for another shoe that'll go the distance with the same
+                        lightness and bounce as the Pegasus but with stability to keep my form in check when I reach those "greater fatigue
+                        miles".
+                        
+                        Thanks for listening! Happy running! :-D
+
+                      </p>
+                      <div @click="seeMoreHandler()" class=" flex space-x-1 mb-2 items-center cursor-pointer">
+                        <span :class="seeMore?'rotate-180':'rotate-0'" class="transform">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+                            <path fill="none" d="M0 0h24v24H0z"></path>
+                            <path d="M12 15l-4.243-4.243 1.415-1.414L12 12.172l2.828-2.829 1.415 1.414z"></path>
+                          </svg>
+                        </span>
+                        <span class="text-sm text-[#007185] hover:underline hover:text-thover">Read 
+                          <template x-cloak x-if="seeMore">
+                            <span>Less</span>
+                          </template>
+                          <template x-cloak x-if="!seeMore">
+                            <span>More</span>
+                          </template>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="flex space-x-1 mb-5">
+                      <div class="w-[177px] h-[88px]">
+                        <img src="./images/review-img-1.jpg" alt="" class="w-full h-full object-cover">
+                      </div>
+                      <div class="w-[177px] h-[88px]">
+                        <img src="./images/review-img-1.jpg" alt="" class="w-full h-full object-cover">
+                      </div>
+                      <div class="w-[177px] h-[88px]">
+                        <img src="./images/review-img-1.jpg" alt="" class="w-full h-full object-cover">
+                      </div>
+                    </div>
+                    <p class="text-sm text-[#565959]">317 people found this helpful</p>
+                   <div class="flex space-x-2 items-center mt-2">
+                    <a href="#">
+                      <div class="w-[98px] h-[30px] rounded-lg text-sm text-tblack border shadow-lg flex justify-center items-center">
+                        Helpful
+                      </div>
+                    </a>
+                    <span class="text-sm text-[#565959]">|</span>
+                    <span class="text-sm text-[#565959] cursor-pointer">Report abuse</span>
+                   </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div>
+                    <div class="flex space-x-3 items-center">
+                      <div class="w-[34px] h-[34px] rounded-full overflow-hidden">
+                        <img
+                          src="https://images-na.ssl-images-amazon.com/images/W/IMAGERENDERING_521856-T1/images/S/amazon-avatars-global/42fffeb5-ac63-4df3-9abf-6fb5f35f9fdf._CR66,0,367,367_SX48_.jpg"
+                          alt="" class="w-full h-full">
+                      </div>
+                      <span class="text-sm text-tblack">Debeck</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                      <div class="flex">
+                        <img src="./images/starfull.png" alt="">
+                        <img src="./images/starfull.png" alt="">
+                        <img src="./images/starfull.png" alt="">
+                        <img src="./images/starfull.png" alt="">
+                        <img src="./images/starhalf.png" alt="">
+                      </div>
+                      <span class="texr-lg text-[#0F1111] font-bold">OH SO COMFORTABLE!</span>
+                    </div>
+                    <p class="text-sm text-[#565959]">Reviewed in the United States on July 6, 2020</p>
+                    <div class="flex space-x-2 items-center">
+                      <span class="text-sm text-[#565959]">Size: 9</span>
+                      <span class="text-sm text-[#565959]">|</span>
+                      <span class="text-sm text-[#565959]">Color: Multicolour Phantom Bio Beige Barely Volt 2</span>
+                      <span class="text-sm text-[#565959] ">|</span>
+                      <span class="text-sm font-medium text-thover hover:underline cursor-pointer">Verified Purchase</span>
+                    </div>
+                    <div x-data="{
+                                      seeMore:false,
+                                      seeMoreHandler:function(){
+                                        this.seeMore=!this.seeMore;
+                                      }
+                                    }">
+                      <p :class="seeMore?'h-auto':'h-[275px]'" class="text-sm text-tblack overflow-hidden">
+                        I love running, and I love long distances (favorite racing distances are 10K, 12K, 15K, and half marathons).
+                        Back in my
+                        high school track-and-field days, I was fitted and told I need to use a specific line of Brooks for support.
+                        Eventually
+                        I evolved to like Saucony; mainly because they were cheaper but also because the fit...worked? After I started
+                        triathlons and Ironmans a few years ago, my miles grew exponentially so I decided to get refitted for a better
+                        sneaker
+                        once more. I found the Brooks Ghost at that point and was very pleased for nearly 9-ish months. They were a
+                        comfortable
+                        shoe that fit me well, however I found over time, the lack of ankle support really started to take it's toll.
+                        FYI, I
+                        change out my shoes roughly every 3-4 months depending on the amount of miles ran. By about last December, I
+                        started to
+                        get right foot pain after each run. Instead of looking elsewhere, I bought the next generation of Brooks Ghost.
+                        This
+                        seemed to only worsen the lack of ankle support and regular foot pain after longer distances. Finally, in search
+                        of
+                        another shoe, I found myself drawn to Nike even though I've never owned a pair of Nikes in my life. RunnersWorld
+                        and
+                        Triathlon articles have many suggested brands, and I never thought I'd see the day Nike was in their top 10. I
+                        must've
+                        missed how much Nike has changed their line of runners over the past decade; suggesting that their shoes are now
+                        more
+                        comfortable and faster. I decided to take a chance with the Air Zoom Pegasus 36. The moment I put these on, they
+                        felt
+                        AMAZING! Typically any pair of new running shoes needs some time doing low miles to really break them in,
+                        however these
+                        adorable lime green Pegasus felt like they were made for my feet from day one! I should advise, I do have normal
+                        to
+                        narrower feet and these fit like a glove. The Pegasus is like a cloud supporting all the right places, springing
+                        comfortably with each stride, and VERY lightweight! I was so surprised at the light feel that I put these on an
+                        ounce/gram scale to compare with my Ghosts. The Pegasus 36 pair weighed in at 478 grams and the Ghost 12 pair
+                        weighed in
+                        at 568... a 90g difference! That may not sound like much but when you add miles or do the distance after 90K of
+                        biking,
+                        shaving off a few grams can make all the difference. On my first run with these I took them to the track and did
+                        8.5
+                        miles, 6.25 of which at race pace. I got some of my fastest times recorded in a long time on the track that day.
+                        And
+                        bonus, no ankle or foot pain! I also did not need to stretch regularly between splits, because my legs felt
+                        amazing!
+                        Time will really tell how the Pegasus will hold up against the elements, but to be honest, even if these don't
+                        make it
+                        as my new, forever running brand, I would be happy to keep these as an everyday walking shoe. They are OH SO
+                        COMFORTABLE! Today after my run I actually put them back on to wear at work for a 12-hour shift. I can honestly
+                        say I
+                        never did that with my Ghosts 11s or 12s. :-)
+                
+                        I'll report back in a few months to advise how these are holding up. ...maybe by then I'll actually get to run a
+                        race in
+                        these?!?!?! *hopes* That is, if Covid-19 ever calms the fudge down!!!!
+                
+                        Hope y'all stay safe and healthy out there! Cheers!
+                
+                        ***5 month update***** I still love the Nike Pegasus 36. Since July I purchased a 2nd pair in pink/black in
+                        order to
+                        alternate wear. The shoes still feel as comfortable as ever. I have even been able to run two Covid-approved
+                        races since
+                        October (a 10K and Half Marathon) where I placed 1st place overall female in both! However, I discovered that
+                        while I
+                        love the light-weight and energy transfer from the Pegasus, I am a greater fan of them with in shorter
+                        distances. When
+                        reaching the 13 mile mark, my joints feel as those they could use more stability. In a 10K, the Pegasus worked
+                        fantastic! I compared a half marathon solo run with the Pegasus then did the same with my old Brooks Ghost.
+                        While the
+                        Brooks still caused a few blisters and foot pain, my knees and poster kept better than with the Pegasus. I've
+                        learned
+                        that sometimes too much cushion with less structure can cause more work for the body to maneuver between stride
+                        (for me
+                        at least). I am still a complete fan of the Pegasus and will continue to use them in training and DEFINITELY for
+                        any
+                        races shorter than 13.1 miles. However, I am now on the hunt for another shoe that'll go the distance with the
+                        same
+                        lightness and bounce as the Pegasus but with stability to keep my form in check when I reach those "greater
+                        fatigue
+                        miles".
+                
+                        Thanks for listening! Happy running! :-D
+                
+                      </p>
+                      <div @click="seeMoreHandler()" class=" flex space-x-1 mb-2 items-center cursor-pointer">
+                        <span :class="seeMore?'rotate-180':'rotate-0'" class="transform">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+                            <path fill="none" d="M0 0h24v24H0z"></path>
+                            <path d="M12 15l-4.243-4.243 1.415-1.414L12 12.172l2.828-2.829 1.415 1.414z"></path>
+                          </svg>
+                        </span>
+                        <span class="text-sm text-[#007185] hover:underline hover:text-thover">Read
+                          <template x-cloak x-if="seeMore">
+                            <span>Less</span>
+                          </template>
+                          <template x-cloak x-if="!seeMore">
+                            <span>More</span>
+                          </template>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="flex space-x-1 mb-5">
+                      <div class="w-[177px] h-[88px]">
+                        <img src="./images/review-img-1.jpg" alt="" class="w-full h-full object-cover">
+                      </div>
+                      <div class="w-[177px] h-[88px]">
+                        <img src="./images/review-img-1.jpg" alt="" class="w-full h-full object-cover">
+                      </div>
+                      <div class="w-[177px] h-[88px]">
+                        <img src="./images/review-img-1.jpg" alt="" class="w-full h-full object-cover">
+                      </div>
+                    </div>
+                    <p class="text-sm text-[#565959]">317 people found this helpful</p>
+                    <div class="flex space-x-2 items-center mt-2">
+                      <a href="#">
+                        <div class="w-[98px] h-[30px] rounded-lg text-sm text-tblack border shadow-lg flex justify-center items-center">
+                          Helpful
+                        </div>
+                      </a>
+                      <span class="text-sm text-[#565959]">|</span>
+                      <span class="text-sm text-[#565959] cursor-pointer">Report abuse</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
