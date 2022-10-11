@@ -1269,7 +1269,7 @@
         </div>
       </section>
       <!--        breadcrumb-->
-      <section class="w-full mb-[20px]">
+      <section class="w-full mb-[20px] relative">
         <div class="container mx-auto">
           <div class="w-full">
             <ul class="flex space-x-1 items-center">
@@ -1291,6 +1291,15 @@
             </ul>
           </div>
         </div>
+       <div class="absolute right-0 -top-2">
+        <div class="space-x-1 items-center group cursor-pointer inline-flex" @click="feedBackHandler()">
+          <span class="text-[11px] text-[#565959]">Sponsored</span>
+          <span>
+            <img src="./images/idea.png" alt="" class="group-hover:hidden block" />
+            <img src="./images/idea2.png" alt="" class="group-hover:block hidden" />
+          </span>
+        </div>
+       </div>
       </section>
       <!--        product-->
       <section
