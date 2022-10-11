@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="./fordev/temp.tailwind.min.js"></script>
-    <script defer src="./fordev/temp.alpine.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <!--temporary config-->
-    <script>
+    <!-- <script>
       tailwind.config = {
         theme: {
           extend: {
@@ -22,7 +22,7 @@
           },
         },
       };
-    </script>
+    </script> -->
     <title>amazon</title>
     <style>
       [x-cloak] {
@@ -72,7 +72,7 @@
             <div
               class="w-full h-[57px] bg-[#F0F2F2] px-6 flex items-center justify-between"
             >
-              <h2 class="text-base text-tblack font-bold">Nike Size Chart</h2>
+              <h2 class="text-base text-[#0F1111] font-bold">Nike Size Chart</h2>
               <div @click="sizeChartHandler()" class="cursor-pointer">
                 <span>
                   <svg
@@ -91,7 +91,7 @@
             </div>
             <div class="px-[25px] pt-[20px] pb-[50px] h-full overflow-y-auto">
               <div class="mb-3">
-                <h2 class="text-base text-tblack font-bold mb-2">
+                <h2 class="text-base text-[#0F1111] font-bold mb-2">
                   Nike Size Chart
                 </h2>
                 <div>
@@ -125,7 +125,7 @@
                 </div>
               </div>
               <div>
-                <h2 class="text-base text-tblack font-bold mb-2">
+                <h2 class="text-base text-[#0F1111] font-bold mb-2">
                   US SHOE SIZE
                 </h2>
                 <div>
@@ -167,7 +167,7 @@
       <div class="size-chart-wrapper w-full h-screen fixed left-0 top-0 z-10">
         <div @click="fitHandler()" class="w-full h-full fixed left-0 top-0 bg-black bg-opacity-50 z-40"></div>
         <div class="w-full h-full flex justify-center items-center">
-          <div class="w-[780px] h-[560px] bg-white relative z-40 rounded-lg overflow-hidden">
+          <div class="lg:w-[780px] w-full h-full lg:h-[560px] bg-white relative z-40 rounded-lg overflow-hidden">
             <div class="w-full h-[57px] bg-[#F0F2F2] px-6 flex items-center justify-end">
               <div @click="fitHandler()" class="cursor-pointer">
                 <span>
@@ -179,19 +179,19 @@
                 </span>
               </div>
             </div>
-            <div class="px-[40px] pt-[30px]">
+            <div class="sm:px-[40px] sm:pt-[30px] px-5 py-3">
               <div class="mb-3">
                 <div class="flex justify-center mb-5">
-                  <h2 class="text-[24px] text-tblack font-medium mb-2">
+                  <h2 class="text-[24px] text-[#0F1111] font-medium mb-2">
                     Customers say this <span class="font-bold">fits true to size.</span>
                   </h2>
                 </div>
-                <div class="flex space-x-6 ">
-                  <div class="w-[272px] flex flex-col space-y-4 pb-4">
+                <div class="sm:flex sm:space-x-6 ">
+                  <div class="sm:w-[272px] flex flex-col space-y-4 pb-4">
                     <div class="flex justify-between items-center">
                       <p class="text-[#565959] text-sm font-medium w-[115px]">Too small</p>
                       <div
-                        class="w-[127px] h-5 bg-[#F0F2F2] overflow-hidden rounded border hover:bg-[#FFF6E0] hover:border-thover">
+                        class="w-[127px] h-5 bg-[#F0F2F2] overflow-hidden rounded border hover:bg-[#FFF6E0] hover:border-[#C7511F]">
                         <div class="w-full h-full bg-[#FFA41C]" style="width: 50%"></div>
                       </div>
                       <span class="text-[#565959] text-sm font-medium"> 38</span>
@@ -199,7 +199,7 @@
                     <div class="flex justify-between items-center">
                       <p class="text-[#565959] text-sm font-medium w-[115px]">Somewhat small</p>
                       <div
-                        class="w-[127px] h-5 bg-[#F0F2F2] overflow-hidden rounded border hover:bg-[#FFF6E0] hover:border-thover">
+                        class="w-[127px] h-5 bg-[#F0F2F2] overflow-hidden rounded border hover:bg-[#FFF6E0] hover:border-[#C7511F]">
                         <div class="w-full h-full bg-[#FFA41C]" style="width: 50%"></div>
                       </div>
                       <span class="text-[#565959] text-sm font-medium"> 38</span>
@@ -207,7 +207,7 @@
                     <div class="flex justify-between items-center">
                       <p class="text-[#565959] text-sm font-medium w-[115px]">True to size</p>
                       <div
-                        class="w-[127px] h-5 bg-[#F0F2F2] overflow-hidden rounded border hover:bg-[#FFF6E0] hover:border-thover">
+                        class="w-[127px] h-5 bg-[#F0F2F2] overflow-hidden rounded border hover:bg-[#FFF6E0] hover:border-[#C7511F]">
                         <div class="w-full h-full bg-[#FFA41C]" style="width: 50%"></div>
                       </div>
                       <span class="text-[#565959] text-sm font-medium"> 38</span>
@@ -215,7 +215,7 @@
                     <div class="flex justify-between items-center">
                       <p class="text-[#565959] text-sm font-medium w-[115px]">Somewhat large</p>
                       <div
-                        class="w-[127px] h-5 bg-[#F0F2F2] overflow-hidden rounded border hover:bg-[#FFF6E0] hover:border-thover">
+                        class="w-[127px] h-5 bg-[#F0F2F2] overflow-hidden rounded border hover:bg-[#FFF6E0] hover:border-[#C7511F]">
                         <div class="w-full h-full bg-[#FFA41C]" style="width: 50%"></div>
                       </div>
                       <span class="text-[#565959] text-sm font-medium"> 38</span>
@@ -223,7 +223,7 @@
                     <div class="flex justify-between items-center">
                       <p class="text-[#565959] text-sm font-medium w-[115px]">Too large</p>
                       <div
-                        class="w-[127px] h-5 bg-[#F0F2F2] overflow-hidden rounded border hover:bg-[#FFF6E0] hover:border-thover">
+                        class="w-[127px] h-5 bg-[#F0F2F2] overflow-hidden rounded border hover:bg-[#FFF6E0] hover:border-[#C7511F]">
                         <div class="w-full h-full bg-[#FFA41C]" style="width: 50%"></div>
                       </div>
                       <span class="text-[#565959] text-sm font-medium"> 38</span>
@@ -232,17 +232,17 @@
                   <div class="flex-1">
                     <div class="flex flex-col space-y-1">
                       <div>
-                        <p class="text-sm text-tblack">"They fit as expected (I got a woman's 7) and are very comfortable."
+                        <p class="text-sm text-[#0F1111]">"They fit as expected (I got a woman's 7) and are very comfortable."
                         </p>
                         <p class="text-sm text-[#565959]">Kate Miller | Fit: True to size</p>
                       </div>
                       <div>
-                        <p class="text-sm text-tblack">"They fit as expected (I got a woman's 7) and are very comfortable."
+                        <p class="text-sm text-[#0F1111]">"They fit as expected (I got a woman's 7) and are very comfortable."
                         </p>
                         <p class="text-sm text-[#565959]">Kate Miller | Fit: True to size</p>
                       </div>
                       <div>
-                        <p class="text-sm text-tblack">"They fit as expected (I got a woman's 7) and are very comfortable."
+                        <p class="text-sm text-[#0F1111]">"They fit as expected (I got a woman's 7) and are very comfortable."
                         </p>
                         <p class="text-sm text-[#565959]">Kate Miller | Fit: True to size</p>
                       </div>
@@ -1318,10 +1318,10 @@
     <main>
       <!--        row single product-->
       <section class="w-full h-[55px] bg-[#F7F8F8] border-b border-gray-200">
-        <div class="container mx-auto h-full">
+        <div class="container mx-auto px-2 sm:px-0 h-full">
           <a href="#">
             <div
-              class="w-full h-full flex items-center justify-between px-[140px]"
+              class="w-full h-full flex items-center justify-between sm:px-[140px]"
             >
               <div class="w-[100px] h-[45px]">
                 <img
@@ -1331,7 +1331,7 @@
                 />
               </div>
               <div>
-                <span class="text-sm text-tblack"
+                <span class="text-sm text-[#0F1111]"
                   >Skechers Go Run Maxroad 5</span
                 >
               </div>
@@ -1367,7 +1367,7 @@
       </section>
       <!--        breadcrumb-->
       <section class="w-full mb-[20px] relative">
-        <div class="container mx-auto">
+        <div class="container mx-auto px-2 sm:px-0">
           <div class="w-full">
             <ul class="flex space-x-1 items-center">
               <li class="text-xs text-[#565959]">
@@ -1442,17 +1442,17 @@
                 },
             }
         }"
-        class="w-full"
+        class="w-full "
       >
-        <div class="container mx-auto">
+        <div class="container mx-auto px-2 sm:px-0">
           <div class="w-full flex space-x-[30px] pb-[30px] border-b">
-            <div class="flex-1 flex space-x-[30px]">
-              <div class="w-[595px] flex h-[460px] relative">
-                <div class="w-[45px] h-full flex flex-col space-y-2">
+            <div class="flex-1 lg:flex lg:space-x-[30px]">
+              <div class="lg:w-[595px] w-full flex sm:flex-row flex-col-reverse h-[460px] relative mt-[50px] sm:mt-0">
+                <div class="sm:w-[45px] w-full sm:h-full flex sm:flex-col flex-row sm:space-y-2 sm:space-x-0 space-x-0">
                   <template x-for="item in imgModule.leftSrcs">
                     <div
                     :class="imgModule.current===item.lg?'shadow-lg shadow-[#e4791180] border-[#e4791180]':'border-[#a2a6ac]'"
-                      class="w-full h-[40px] border  hover:border-[#e4791180] hover:shadow-lg hover:shadow-[#e4791180] cursor-pointer"
+                      class="sm:w-full w-[40px] h-[40px] border  hover:border-[#e4791180] hover:shadow-lg hover:shadow-[#e4791180] cursor-pointer"
                     >
                       <img
                         @mouseover="imgModule.changeSrc(item.lg)"
@@ -1504,7 +1504,7 @@
                                 />
                               </div>
 
-                              <span class="text-sm text-tblack leading-none"
+                              <span class="text-sm text-[#0F1111] leading-none"
                                 >Email</span
                               >
                             </div>
@@ -1523,7 +1523,7 @@
                                 />
                               </div>
 
-                              <span class="text-sm text-tblack leading-none"
+                              <span class="text-sm text-[#0F1111] leading-none"
                                 >Pinterest</span
                               >
                             </div>
@@ -1542,7 +1542,7 @@
                                 />
                               </div>
 
-                              <span class="text-sm text-tblack leading-none"
+                              <span class="text-sm text-[#0F1111] leading-none"
                                 >Facebook</span
                               >
                             </div>
@@ -1561,7 +1561,7 @@
                                 />
                               </div>
 
-                              <span class="text-sm text-tblack leading-none"
+                              <span class="text-sm text-[#0F1111] leading-none"
                                 >Twitter</span
                               >
                             </div>
@@ -1580,7 +1580,7 @@
                                 />
                               </div>
 
-                              <span class="text-sm text-tblack leading-none"
+                              <span class="text-sm text-[#0F1111] leading-none"
                                 >Copy link</span
                               >
                             </div>
@@ -1591,7 +1591,7 @@
                   </div>
                 </div>
               </div>
-              <div class="flex-1">
+              <div class="flex-1 mt-5 lg:mt-0">
                 <div class="border-b mb-5">
                   <span class="text-[#007185] text-sm">Brand: Nike</span>
                   <h1 class="text-[24px] text-[#565959]">
@@ -1644,7 +1644,7 @@
                           <div class="flex justify-between items-center">
                             <span class="text-[#007185] text-sm"> 5 star</span>
                             <div
-                              class="w-[197px] h-5 bg-[#F0F2F2] overflow-hidden rounded border hover:bg-[#FFF6E0] hover:border-thover"
+                              class="w-[197px] h-5 bg-[#F0F2F2] overflow-hidden rounded border hover:bg-[#FFF6E0] hover:border-[#C7511F]"
                             >
                               <div
                                 class="w-full h-full bg-[#FFA41C]"
@@ -1656,7 +1656,7 @@
                           <div class="flex justify-between items-center">
                             <span class="text-[#007185] text-sm"> 4 star</span>
                             <div
-                              class="w-[197px] h-5 bg-[#F0F2F2] overflow-hidden rounded border hover:bg-[#FFF6E0] hover:border-thover"
+                              class="w-[197px] h-5 bg-[#F0F2F2] overflow-hidden rounded border hover:bg-[#FFF6E0] hover:border-[#C7511F]"
                             >
                               <div
                                 class="w-full h-full bg-[#FFA41C]"
@@ -1668,7 +1668,7 @@
                           <div class="flex justify-between items-center">
                             <span class="text-[#007185] text-sm"> 3 star</span>
                             <div
-                              class="w-[197px] h-5 bg-[#F0F2F2] overflow-hidden rounded border hover:bg-[#FFF6E0] hover:border-thover"
+                              class="w-[197px] h-5 bg-[#F0F2F2] overflow-hidden rounded border hover:bg-[#FFF6E0] hover:border-[#C7511F]"
                             >
                               <div
                                 class="w-full h-full bg-[#FFA41C]"
@@ -1680,7 +1680,7 @@
                           <div class="flex justify-between items-center">
                             <span class="text-[#007185] text-sm"> 2 star</span>
                             <div
-                              class="w-[197px] h-5 bg-[#F0F2F2] overflow-hidden rounded border hover:bg-[#FFF6E0] hover:border-thover"
+                              class="w-[197px] h-5 bg-[#F0F2F2] overflow-hidden rounded border hover:bg-[#FFF6E0] hover:border-[#C7511F]"
                             >
                               <div
                                 class="w-full h-full bg-[#FFA41C]"
@@ -1692,7 +1692,7 @@
                           <div class="flex justify-between items-center">
                             <span class="text-[#007185] text-sm"> 1 star</span>
                             <div
-                              class="w-[197px] h-5 bg-[#F0F2F2] overflow-hidden rounded border hover:bg-[#FFF6E0] hover:border-thover"
+                              class="w-[197px] h-5 bg-[#F0F2F2] overflow-hidden rounded border hover:bg-[#FFF6E0] hover:border-[#C7511F]"
                             >
                               <div
                                 class="w-full h-full bg-[#FFA41C]"
@@ -1713,11 +1713,11 @@
                         </div>
                       </div>
                     </div>
-                    <a href="#reviews-section" class="text-sm text-[#007185] leading-none hover:underline hover:text-thover">18,858</a>
+                    <a href="#reviews-section" class="text-sm text-[#007185] leading-none hover:underline hover:text-[#C7511F]">18,858</a>
                     <div class="text-gray-300">|</div>
                     <div>
                       <a href="#upvoted"
-                        class="text-sm text-[#007185] hover:underline hover:text-thover cursor-pointer leading-none"
+                        class="text-sm text-[#007185] hover:underline hover:text-[#C7511F] cursor-pointer leading-none"
                         >82 answered questions</a
                       >
                     </div>
@@ -1732,7 +1732,7 @@
                 <div class="mb-2">
                   <span class="text-sm font-bold text-black">Fit:</span>
                   <span @click="fitHandler"
-                    class="text-sm text-[#007185] hover:underline hover:text-thover cursor-pointer leading-none"
+                    class="text-sm text-[#007185] hover:underline hover:text-[#C7511F] cursor-pointer leading-none"
                     >True to size. Order usual size.</span
                   >
                 </div>
@@ -1755,7 +1755,7 @@
                     @click="toggle()"
                     type="type"
                     x-text="value"
-                    class="w-[77px] h-[29px] rounded-lg text-sm border border-[#D5D9D9] text-tblack shadow-lg"
+                    class="w-[77px] h-[29px] rounded-lg text-sm border border-[#D5D9D9] text-[#0F1111] shadow-lg"
                   >
                     Select
                   </button>
@@ -1822,7 +1822,7 @@
                   class="flex space-x-1 mb-2 cursor-pointer"
                 >
                   <span
-                    class="text-sm text-[#007185] hover:underline hover:text-thover"
+                    class="text-sm text-[#007185] hover:underline hover:text-[#C7511F]"
                     >Size Chart</span
                   >
                   <span>
@@ -1852,36 +1852,36 @@
                     :class="seeMore?'max-h-auto':'max-h-[105px] '"
                     class="w-full overflow-hidden"
                   >
-                    <h1 class="text-base font-bold text-tblack mb-3">
+                    <h1 class="text-base font-bold text-[#0F1111] mb-3">
                       Product Details
                     </h1>
-                    <table class="pb-3 border-b w-full block mb-3">
+                    <table class="pb-3 border-b sm:w-full block mb-3">
                       <tr>
-                        <td class="text-sm text-tblack font-bold w-[165px]">
+                        <td class="text-sm text-[#0F1111] font-bold w-[165px]">
                           Fabric Type:
                         </td>
-                        <td class="text-sm text-tblack">100% Synthetic</td>
+                        <td class="text-sm text-[#0F1111]">100% Synthetic</td>
                       </tr>
                       <tr>
-                        <td class="text-sm text-tblack font-bold w-[165px]">
+                        <td class="text-sm text-[#0F1111] font-bold w-[165px]">
                           Fabric Type:
                         </td>
-                        <td class="text-sm text-tblack">100% Synthetic</td>
+                        <td class="text-sm text-[#0F1111]">100% Synthetic</td>
                       </tr>
                       <tr>
-                        <td class="text-sm text-tblack font-bold w-[165px]">
+                        <td class="text-sm text-[#0F1111] font-bold w-[165px]">
                           Fabric Type:
                         </td>
-                        <td class="text-sm text-tblack">100% Synthetic</td>
+                        <td class="text-sm text-[#0F1111]">100% Synthetic</td>
                       </tr>
                       <tr>
-                        <td class="text-sm text-tblack font-bold w-[165px]">
+                        <td class="text-sm text-[#0F1111] font-bold w-[165px]">
                           Fabric Type:
                         </td>
-                        <td class="text-sm text-tblack">100% Synthetic</td>
+                        <td class="text-sm text-[#0F1111]">100% Synthetic</td>
                       </tr>
                     </table>
-                    <h1 class="text-base font-bold text-tblack mb-3">
+                    <h1 class="text-base font-bold text-[#0F1111] mb-3">
                       About this Item
                     </h1>
                     <div class="w-full pb-3 border-b mb-3">
@@ -1891,7 +1891,7 @@
                         </li>
                       </ul>
                     </div>
-                    <h1 class="text-base font-bold text-tblack mb-3">
+                    <h1 class="text-base font-bold text-[#0F1111] mb-3">
                       Description
                     </h1>
                     <div class="w-full pb-3">
@@ -1918,7 +1918,7 @@
                           </svg>
                         </span>
                         <span
-                          class="text-sm text-[#007185] hover:underline hover:text-thover font-medium"
+                          class="text-sm text-[#007185] hover:underline hover:text-[#C7511F] font-medium"
                           >See less</span
                         >
                       </div>
@@ -1939,7 +1939,7 @@
                           </svg>
                         </span>
                         <span
-                          class="text-sm text-[#007185] hover:underline hover:text-thover font-medium"
+                          class="text-sm text-[#007185] hover:underline hover:text-[#C7511F] font-medium"
                           >See more</span
                         >
                       </div>
@@ -1948,18 +1948,18 @@
                 </div>
               </div>
             </div>
-            <div class="w-[245px]">
+            <div class="w-[245px] xl:block hidden">
               <div
                 class="w-full border border-[#D5D9D9] rounded-lg h-[143px] px-[18px] py-[14px] mb-3"
               >
                 <div class="w-full pb-3 mb-3 border-b">
-                  <p class="text-sm text-tblack text-center">
+                  <p class="text-sm text-[#0F1111] text-center">
                     To buy, select <span class="font-bold"> Size</span>
                   </p>
                   <div class="w-full flex justify-center">
                     <button
                       type="button"
-                      class="w-full h-[30px] text-sm text-tblack bg-[#F7CA00] rounded-full mt-2"
+                      class="w-full h-[30px] text-sm text-[#0F1111] bg-[#F7CA00] rounded-full mt-2"
                     >
                       Add to Cart
                     </button>
@@ -2056,10 +2056,10 @@
         </div>
       </section>
       <section>
-        <div class="container mx-auto py-[30px] border-b">
+        <div class="container mx-auto px-2 sm:px-0 py-[30px] border-b">
           <div class="mb-3">
             <div class="flex justify-between items-center">
-              <h1 class="text-[24px] font-bold text-tblack">4 stars and above</h1>
+              <h1 class="text-[24px] font-bold text-[#0F1111]">4 stars and above</h1>
               <div>
                 <span class="text-sm text-qblack">Page <span>1</span> of <span>13</span></span>
               </div>
@@ -2072,12 +2072,12 @@
               </span>
             </div>
           </div>
-          <div class="grid grid-cols-7 gap-[30px]">
+          <div class="grid xl:grid-cols-7 lg:grid-cols-5 sm:grid-cols-4 grid-cols-2 gap-[30px]">
             <div class="item">
               <div class="w-full h-[160px]">
                 <img src="./images/product(10).jpg" alt="" class="w-full h-full object-contain">
               </div>
-              <p class="text-sm text-[#007185] hover:underline hover:text-thover">Nike Renew in-Season TR 11 Womens Running Shoe (11, Pink Oxford/MTLC Pewter,…</p>
+              <p class="text-sm text-[#007185] hover:underline hover:text-[#C7511F]">Nike Renew in-Season TR 11 Womens Running Shoe (11, Pink Oxford/MTLC Pewter,…</p>
               <div class="xl:inline-flex hidden items-center py-1 relative cursor-pointer">
                 <div class="flex mr-1">
                   <img src="./images/starfull.png" alt="">
@@ -2109,7 +2109,7 @@
               <div class="w-full h-[160px]">
                 <img src="./images/product(10).jpg" alt="" class="w-full h-full object-contain">
               </div>
-              <p class="text-sm text-[#007185] hover:underline hover:text-thover">Nike Renew in-Season TR 11 Womens Running Shoe (11, Pink Oxford/MTLC Pewter,…</p>
+              <p class="text-sm text-[#007185] hover:underline hover:text-[#C7511F]">Nike Renew in-Season TR 11 Womens Running Shoe (11, Pink Oxford/MTLC Pewter,…</p>
               <div class="xl:inline-flex hidden items-center py-1 relative cursor-pointer">
                 <div class="flex mr-1">
                   <img src="./images/starfull.png" alt="">
@@ -2141,7 +2141,7 @@
               <div class="w-full h-[160px]">
                 <img src="./images/product(10).jpg" alt="" class="w-full h-full object-contain">
               </div>
-              <p class="text-sm text-[#007185] hover:underline hover:text-thover">Nike Renew in-Season TR 11 Womens Running Shoe (11, Pink Oxford/MTLC Pewter,…</p>
+              <p class="text-sm text-[#007185] hover:underline hover:text-[#C7511F]">Nike Renew in-Season TR 11 Womens Running Shoe (11, Pink Oxford/MTLC Pewter,…</p>
               <div class="xl:inline-flex hidden items-center py-1 relative cursor-pointer">
                 <div class="flex mr-1">
                   <img src="./images/starfull.png" alt="">
@@ -2173,7 +2173,7 @@
               <div class="w-full h-[160px]">
                 <img src="./images/product(10).jpg" alt="" class="w-full h-full object-contain">
               </div>
-              <p class="text-sm text-[#007185] hover:underline hover:text-thover">Nike Renew in-Season TR 11 Womens Running Shoe (11, Pink Oxford/MTLC Pewter,…</p>
+              <p class="text-sm text-[#007185] hover:underline hover:text-[#C7511F]">Nike Renew in-Season TR 11 Womens Running Shoe (11, Pink Oxford/MTLC Pewter,…</p>
               <div class="xl:inline-flex hidden items-center py-1 relative cursor-pointer">
                 <div class="flex mr-1">
                   <img src="./images/starfull.png" alt="">
@@ -2205,7 +2205,7 @@
               <div class="w-full h-[160px]">
                 <img src="./images/product(10).jpg" alt="" class="w-full h-full object-contain">
               </div>
-              <p class="text-sm text-[#007185] hover:underline hover:text-thover">Nike Renew in-Season TR 11 Womens Running Shoe (11, Pink Oxford/MTLC Pewter,…</p>
+              <p class="text-sm text-[#007185] hover:underline hover:text-[#C7511F]">Nike Renew in-Season TR 11 Womens Running Shoe (11, Pink Oxford/MTLC Pewter,…</p>
               <div class="xl:inline-flex hidden items-center py-1 relative cursor-pointer">
                 <div class="flex mr-1">
                   <img src="./images/starfull.png" alt="">
@@ -2237,7 +2237,7 @@
               <div class="w-full h-[160px]">
                 <img src="./images/product(10).jpg" alt="" class="w-full h-full object-contain">
               </div>
-              <p class="text-sm text-[#007185] hover:underline hover:text-thover">Nike Renew in-Season TR 11 Womens Running Shoe (11, Pink Oxford/MTLC Pewter,…</p>
+              <p class="text-sm text-[#007185] hover:underline hover:text-[#C7511F]">Nike Renew in-Season TR 11 Womens Running Shoe (11, Pink Oxford/MTLC Pewter,…</p>
               <div class="xl:inline-flex hidden items-center py-1 relative cursor-pointer">
                 <div class="flex mr-1">
                   <img src="./images/starfull.png" alt="">
@@ -2269,7 +2269,7 @@
               <div class="w-full h-[160px]">
                 <img src="./images/product(10).jpg" alt="" class="w-full h-full object-contain">
               </div>
-              <p class="text-sm text-[#007185] hover:underline hover:text-thover">Nike Renew in-Season TR 11 Womens Running Shoe (11, Pink Oxford/MTLC Pewter,…</p>
+              <p class="text-sm text-[#007185] hover:underline hover:text-[#C7511F]">Nike Renew in-Season TR 11 Womens Running Shoe (11, Pink Oxford/MTLC Pewter,…</p>
               <div class="xl:inline-flex hidden items-center py-1 relative cursor-pointer">
                 <div class="flex mr-1">
                   <img src="./images/starfull.png" alt="">
@@ -2301,48 +2301,48 @@
         </div>
       </section>
       <section>
-        <div class="container mx-auto py-[30px] border-b">
-          <h1 class="text-[24px] font-bold text-tblack mb-3">
+        <div class="container mx-auto px-2 sm:px-0 py-[30px] border-b">
+          <h1 class="text-[24px] font-bold text-[#0F1111] mb-3">
             Product Details
           </h1>
-          <table class="pb-3 w-full block mb-3 ml-5">
+          <table class="pb-3 block mb-3 ml-5">
             <tr>
-              <td class="text-sm text-tblack font-bold">Fabric Type:</td>
-              <td class="text-sm text-tblack">100% Synthetic</td>
+              <td class="text-sm text-[#0F1111] font-bold">Fabric Type:</td>
+              <td class="text-sm text-[#0F1111]">100% Synthetic</td>
             </tr>
             <tr>
-              <td class="text-sm text-tblack font-bold">Fabric Type:</td>
-              <td class="text-sm text-tblack">100% Synthetic</td>
+              <td class="text-sm text-[#0F1111] font-bold">Fabric Type:</td>
+              <td class="text-sm text-[#0F1111]">100% Synthetic</td>
             </tr>
             <tr>
-              <td class="text-sm text-tblack font-bold">Fabric Type:</td>
-              <td class="text-sm text-tblack">100% Synthetic</td>
+              <td class="text-sm text-[#0F1111] font-bold">Fabric Type:</td>
+              <td class="text-sm text-[#0F1111]">100% Synthetic</td>
             </tr>
             <tr>
-              <td class="text-sm text-tblack font-bold">Fabric Type:</td>
-              <td class="text-sm text-tblack">100% Synthetic</td>
+              <td class="text-sm text-[#0F1111] font-bold">Fabric Type:</td>
+              <td class="text-sm text-[#0F1111]">100% Synthetic</td>
             </tr>
             <tr>
-              <td class="text-sm text-tblack font-bold">Fabric Type:</td>
-              <td class="text-sm text-tblack">100% Synthetic</td>
+              <td class="text-sm text-[#0F1111] font-bold">Fabric Type:</td>
+              <td class="text-sm text-[#0F1111]">100% Synthetic</td>
             </tr>
             <tr>
-              <td class="text-sm text-tblack font-bold">Fabric Type:</td>
-              <td class="text-sm text-tblack">100% Synthetic</td>
+              <td class="text-sm text-[#0F1111] font-bold">Fabric Type:</td>
+              <td class="text-sm text-[#0F1111]">100% Synthetic</td>
             </tr>
             <tr>
-              <td class="text-sm text-tblack font-bold">Fabric Type:</td>
-              <td class="text-sm text-tblack">100% Synthetic</td>
+              <td class="text-sm text-[#0F1111] font-bold">Fabric Type:</td>
+              <td class="text-sm text-[#0F1111]">100% Synthetic</td>
             </tr>
             <tr>
-              <td class="text-sm text-tblack font-bold">Fabric Type:</td>
-              <td class="text-sm text-tblack">100% Synthetic</td>
+              <td class="text-sm text-[#0F1111] font-bold">Fabric Type:</td>
+              <td class="text-sm text-[#0F1111]">100% Synthetic</td>
             </tr>
             <tr>
-              <td class="text-sm text-tblack font-bold">Customer Reviews:</td>
-              <td class="text-sm text-tblack">
+              <td class="text-sm text-[#0F1111] font-bold">Customer Reviews:</td>
+              <td class="text-sm text-[#0F1111]">
                 <div
-                  class="xl:inline-flex hidden items-center py-1 group relative cursor-pointer"
+                  class="inline-flex items-center py-1 group relative cursor-pointer"
                 >
                   <div class="flex">
                     <img src="./images/starfull.png" alt="" />
@@ -2387,7 +2387,7 @@
                       <div class="flex justify-between items-center">
                         <span class="text-[#007185] text-sm"> 5 star</span>
                         <div
-                          class="w-[197px] h-5 bg-[#F0F2F2] overflow-hidden rounded border hover:bg-[#FFF6E0] hover:border-thover"
+                          class="w-[197px] h-5 bg-[#F0F2F2] overflow-hidden rounded border hover:bg-[#FFF6E0] hover:border-[#C7511F]"
                         >
                           <div
                             class="w-full h-full bg-[#FFA41C]"
@@ -2399,7 +2399,7 @@
                       <div class="flex justify-between items-center">
                         <span class="text-[#007185] text-sm"> 4 star</span>
                         <div
-                          class="w-[197px] h-5 bg-[#F0F2F2] overflow-hidden rounded border hover:bg-[#FFF6E0] hover:border-thover"
+                          class="w-[197px] h-5 bg-[#F0F2F2] overflow-hidden rounded border hover:bg-[#FFF6E0] hover:border-[#C7511F]"
                         >
                           <div
                             class="w-full h-full bg-[#FFA41C]"
@@ -2411,7 +2411,7 @@
                       <div class="flex justify-between items-center">
                         <span class="text-[#007185] text-sm"> 3 star</span>
                         <div
-                          class="w-[197px] h-5 bg-[#F0F2F2] overflow-hidden rounded border hover:bg-[#FFF6E0] hover:border-thover"
+                          class="w-[197px] h-5 bg-[#F0F2F2] overflow-hidden rounded border hover:bg-[#FFF6E0] hover:border-[#C7511F]"
                         >
                           <div
                             class="w-full h-full bg-[#FFA41C]"
@@ -2423,7 +2423,7 @@
                       <div class="flex justify-between items-center">
                         <span class="text-[#007185] text-sm"> 2 star</span>
                         <div
-                          class="w-[197px] h-5 bg-[#F0F2F2] overflow-hidden rounded border hover:bg-[#FFF6E0] hover:border-thover"
+                          class="w-[197px] h-5 bg-[#F0F2F2] overflow-hidden rounded border hover:bg-[#FFF6E0] hover:border-[#C7511F]"
                         >
                           <div
                             class="w-full h-full bg-[#FFA41C]"
@@ -2435,7 +2435,7 @@
                       <div class="flex justify-between items-center">
                         <span class="text-[#007185] text-sm"> 1 star</span>
                         <div
-                          class="w-[197px] h-5 bg-[#F0F2F2] overflow-hidden rounded border hover:bg-[#FFF6E0] hover:border-thover"
+                          class="w-[197px] h-5 bg-[#F0F2F2] overflow-hidden rounded border hover:bg-[#FFF6E0] hover:border-[#C7511F]"
                         >
                           <div
                             class="w-full h-full bg-[#FFA41C]"
@@ -2462,10 +2462,10 @@
         </div>
       </section>
       <section>
-        <div class="container mx-auto py-[30px] border-b">
+        <div class="container mx-auto px-2 sm:px-0 py-[30px] border-b">
           <div class="mb-3">
-            <div class="flex justify-between items-center">
-              <h1 class="text-[24px] font-bold text-tblack">Related products with free delivery on eligible orders</h1>
+            <div class="sm:flex justify-between items-center">
+              <h1 class="text-[24px] font-bold text-[#0F1111]">Related products with free delivery on eligible orders</h1>
               <div>
                 <span class="text-sm text-qblack">Page <span>1</span> of <span>13</span></span>
               </div>
@@ -2478,12 +2478,12 @@
               </span>
             </div>
           </div>
-          <div class="grid grid-cols-7 gap-[30px]">
+          <div class="grid xl:grid-cols-7 lg:grid-cols-5 sm:grid-cols-4 grid-cols-2 gap-[30px]">
             <div class="item">
               <div class="w-full h-[160px]">
                 <img src="./images/product(10).jpg" alt="" class="w-full h-full object-contain">
               </div>
-              <p class="text-sm text-[#007185] hover:underline hover:text-thover">Nike Renew in-Season TR 11 Womens Running
+              <p class="text-sm text-[#007185] hover:underline hover:text-[#C7511F]">Nike Renew in-Season TR 11 Womens Running
                 Shoe (11, Pink Oxford/MTLC Pewter,…</p>
               <div class="xl:inline-flex hidden items-center py-1 relative cursor-pointer">
                 <div class="flex mr-1">
@@ -2516,7 +2516,7 @@
               <div class="w-full h-[160px]">
                 <img src="./images/product(10).jpg" alt="" class="w-full h-full object-contain">
               </div>
-              <p class="text-sm text-[#007185] hover:underline hover:text-thover">Nike Renew in-Season TR 11 Womens Running
+              <p class="text-sm text-[#007185] hover:underline hover:text-[#C7511F]">Nike Renew in-Season TR 11 Womens Running
                 Shoe (11, Pink Oxford/MTLC Pewter,…</p>
               <div class="xl:inline-flex hidden items-center py-1 relative cursor-pointer">
                 <div class="flex mr-1">
@@ -2549,7 +2549,7 @@
               <div class="w-full h-[160px]">
                 <img src="./images/product(10).jpg" alt="" class="w-full h-full object-contain">
               </div>
-              <p class="text-sm text-[#007185] hover:underline hover:text-thover">Nike Renew in-Season TR 11 Womens Running
+              <p class="text-sm text-[#007185] hover:underline hover:text-[#C7511F]">Nike Renew in-Season TR 11 Womens Running
                 Shoe (11, Pink Oxford/MTLC Pewter,…</p>
               <div class="xl:inline-flex hidden items-center py-1 relative cursor-pointer">
                 <div class="flex mr-1">
@@ -2582,7 +2582,7 @@
               <div class="w-full h-[160px]">
                 <img src="./images/product(10).jpg" alt="" class="w-full h-full object-contain">
               </div>
-              <p class="text-sm text-[#007185] hover:underline hover:text-thover">Nike Renew in-Season TR 11 Womens Running
+              <p class="text-sm text-[#007185] hover:underline hover:text-[#C7511F]">Nike Renew in-Season TR 11 Womens Running
                 Shoe (11, Pink Oxford/MTLC Pewter,…</p>
               <div class="xl:inline-flex hidden items-center py-1 relative cursor-pointer">
                 <div class="flex mr-1">
@@ -2615,7 +2615,7 @@
               <div class="w-full h-[160px]">
                 <img src="./images/product(10).jpg" alt="" class="w-full h-full object-contain">
               </div>
-              <p class="text-sm text-[#007185] hover:underline hover:text-thover">Nike Renew in-Season TR 11 Womens Running
+              <p class="text-sm text-[#007185] hover:underline hover:text-[#C7511F]">Nike Renew in-Season TR 11 Womens Running
                 Shoe (11, Pink Oxford/MTLC Pewter,…</p>
               <div class="xl:inline-flex hidden items-center py-1 relative cursor-pointer">
                 <div class="flex mr-1">
@@ -2648,7 +2648,7 @@
               <div class="w-full h-[160px]">
                 <img src="./images/product(10).jpg" alt="" class="w-full h-full object-contain">
               </div>
-              <p class="text-sm text-[#007185] hover:underline hover:text-thover">Nike Renew in-Season TR 11 Womens Running
+              <p class="text-sm text-[#007185] hover:underline hover:text-[#C7511F]">Nike Renew in-Season TR 11 Womens Running
                 Shoe (11, Pink Oxford/MTLC Pewter,…</p>
               <div class="xl:inline-flex hidden items-center py-1 relative cursor-pointer">
                 <div class="flex mr-1">
@@ -2681,7 +2681,7 @@
               <div class="w-full h-[160px]">
                 <img src="./images/product(10).jpg" alt="" class="w-full h-full object-contain">
               </div>
-              <p class="text-sm text-[#007185] hover:underline hover:text-thover">Nike Renew in-Season TR 11 Womens Running
+              <p class="text-sm text-[#007185] hover:underline hover:text-[#C7511F]">Nike Renew in-Season TR 11 Womens Running
                 Shoe (11, Pink Oxford/MTLC Pewter,…</p>
               <div class="xl:inline-flex hidden items-center py-1 relative cursor-pointer">
                 <div class="flex mr-1">
@@ -2714,11 +2714,11 @@
         </div>
       </section>
       <section id="upvoted">
-        <div class="container mx-auto py-[30px] border-b">
-          <h1 class="text-[24px] font-bold text-tblack mb-6">
+        <div class="container mx-auto px-2 sm:px-0 py-[30px] border-b">
+          <h1 class="text-[24px] font-bold text-[#0F1111] mb-6">
             Customer questions & answers
           </h1>
-          <div class="w-[800px] relative mb-5">
+          <div class="lg:w-[800px] w-full relative mb-5">
             <input
               placeholder="Search in reviews, Q&A..."
               type="text"
@@ -2757,8 +2757,8 @@
                       alt=""
                     />
                   </div>
-                  <p class="text-sm text-tblack leading-none">1</p>
-                  <p class="text-sm text-tblack leading-none">vote</p>
+                  <p class="text-sm text-[#0F1111] leading-none">1</p>
+                  <p class="text-sm text-[#0F1111] leading-none">vote</p>
                   <div class="group cursor-pointer">
                     <img
                       class="group-hover:hidden block transform rotate-180"
@@ -2776,18 +2776,18 @@
               <div class="flex-1 pl-2">
                 <div class="flex w-full">
                   <div class="w-[100px]">
-                    <span class="text-sm font-bold text-tblack">Question:</span>
+                    <span class="text-sm font-bold text-[#0F1111]">Question:</span>
                   </div>
                   <div>
                     <span
-                      class="text-[#007185] hover:underline hover:text-thover"
+                      class="text-[#007185] hover:underline hover:text-[#C7511F]"
                       >Are these shoes wide width?</span
                     >
                   </div>
                 </div>
                 <div class="flex w-full">
                   <div class="w-[100px]">
-                    <span class="text-sm font-bold text-tblack">Answer:</span>
+                    <span class="text-sm font-bold text-[#0F1111]">Answer:</span>
                   </div>
                   <!-- vote -->
                   <div
@@ -2803,7 +2803,7 @@
                       class="flex flex-col space-y-2 overflow-hidden"
                     >
                       <div class="">
-                        <p class="text-sm text-tblack">
+                        <p class="text-sm text-[#0F1111]">
                           I would say the width is medium. I have narrow feet
                           and need to cinch them up for my feet but they fit
                           well.
@@ -2813,7 +2813,7 @@
                         </p>
                       </div>
                       <div>
-                        <p class="text-sm text-tblack">
+                        <p class="text-sm text-[#0F1111]">
                           I would say the width is medium. I have narrow feet
                           and need to cinch them up for my feet but they fit
                           well.
@@ -2823,7 +2823,7 @@
                         </p>
                       </div>
                       <div>
-                        <p class="text-sm text-tblack">
+                        <p class="text-sm text-[#0F1111]">
                           I would say the width is medium. I have narrow feet
                           and need to cinch them up for my feet but they fit
                           well.
@@ -2854,7 +2854,7 @@
                         </svg>
                       </span>
                       <span
-                        class="text-sm text-[#007185] hover:underline hover:text-thover"
+                        class="text-sm text-[#007185] hover:underline hover:text-[#C7511F]"
                         >See
                         <template x-cloak x-if="seeMore">
                           <span>Less</span>
@@ -2883,8 +2883,8 @@
                       alt=""
                     />
                   </div>
-                  <p class="text-sm text-tblack leading-none">1</p>
-                  <p class="text-sm text-tblack leading-none">vote</p>
+                  <p class="text-sm text-[#0F1111] leading-none">1</p>
+                  <p class="text-sm text-[#0F1111] leading-none">vote</p>
                   <div class="group cursor-pointer">
                     <img
                       class="group-hover:hidden block transform rotate-180"
@@ -2902,18 +2902,18 @@
               <div class="flex-1 pl-2">
                 <div class="flex w-full">
                   <div class="w-[100px]">
-                    <span class="text-sm font-bold text-tblack">Question:</span>
+                    <span class="text-sm font-bold text-[#0F1111]">Question:</span>
                   </div>
                   <div>
                     <span
-                      class="text-[#007185] hover:underline hover:text-thover"
+                      class="text-[#007185] hover:underline hover:text-[#C7511F]"
                       >Are these shoes wide width?</span
                     >
                   </div>
                 </div>
                 <div class="flex w-full">
                   <div class="w-[100px]">
-                    <span class="text-sm font-bold text-tblack">Answer:</span>
+                    <span class="text-sm font-bold text-[#0F1111]">Answer:</span>
                   </div>
                   <!-- vote -->
                   <div
@@ -2929,7 +2929,7 @@
                       class="flex flex-col space-y-2 overflow-hidden"
                     >
                       <div class="">
-                        <p class="text-sm text-tblack">
+                        <p class="text-sm text-[#0F1111]">
                           I would say the width is medium. I have narrow feet
                           and need to cinch them up for my feet but they fit
                           well.
@@ -2939,7 +2939,7 @@
                         </p>
                       </div>
                       <div>
-                        <p class="text-sm text-tblack">
+                        <p class="text-sm text-[#0F1111]">
                           I would say the width is medium. I have narrow feet
                           and need to cinch them up for my feet but they fit
                           well.
@@ -2949,7 +2949,7 @@
                         </p>
                       </div>
                       <div>
-                        <p class="text-sm text-tblack">
+                        <p class="text-sm text-[#0F1111]">
                           I would say the width is medium. I have narrow feet
                           and need to cinch them up for my feet but they fit
                           well.
@@ -2980,7 +2980,7 @@
                         </svg>
                       </span>
                       <span
-                        class="text-sm text-[#007185] hover:underline hover:text-thover"
+                        class="text-sm text-[#007185] hover:underline hover:text-[#C7511F]"
                         >See
                         <template x-cloak x-if="seeMore">
                           <span>Less</span>
@@ -3009,8 +3009,8 @@
                       alt=""
                     />
                   </div>
-                  <p class="text-sm text-tblack leading-none">1</p>
-                  <p class="text-sm text-tblack leading-none">vote</p>
+                  <p class="text-sm text-[#0F1111] leading-none">1</p>
+                  <p class="text-sm text-[#0F1111] leading-none">vote</p>
                   <div class="group cursor-pointer">
                     <img
                       class="group-hover:hidden block transform rotate-180"
@@ -3028,18 +3028,18 @@
               <div class="flex-1 pl-2">
                 <div class="flex w-full">
                   <div class="w-[100px]">
-                    <span class="text-sm font-bold text-tblack">Question:</span>
+                    <span class="text-sm font-bold text-[#0F1111]">Question:</span>
                   </div>
                   <div>
                     <span
-                      class="text-[#007185] hover:underline hover:text-thover"
+                      class="text-[#007185] hover:underline hover:text-[#C7511F]"
                       >Are these shoes wide width?</span
                     >
                   </div>
                 </div>
                 <div class="flex w-full">
                   <div class="w-[100px]">
-                    <span class="text-sm font-bold text-tblack">Answer:</span>
+                    <span class="text-sm font-bold text-[#0F1111]">Answer:</span>
                   </div>
                   <!-- vote -->
                   <div
@@ -3055,7 +3055,7 @@
                       class="flex flex-col space-y-2 overflow-hidden"
                     >
                       <div class="">
-                        <p class="text-sm text-tblack">
+                        <p class="text-sm text-[#0F1111]">
                           I would say the width is medium. I have narrow feet
                           and need to cinch them up for my feet but they fit
                           well.
@@ -3065,7 +3065,7 @@
                         </p>
                       </div>
                       <div>
-                        <p class="text-sm text-tblack">
+                        <p class="text-sm text-[#0F1111]">
                           I would say the width is medium. I have narrow feet
                           and need to cinch them up for my feet but they fit
                           well.
@@ -3075,7 +3075,7 @@
                         </p>
                       </div>
                       <div>
-                        <p class="text-sm text-tblack">
+                        <p class="text-sm text-[#0F1111]">
                           I would say the width is medium. I have narrow feet
                           and need to cinch them up for my feet but they fit
                           well.
@@ -3106,7 +3106,7 @@
                         </svg>
                       </span>
                       <span
-                        class="text-sm text-[#007185] hover:underline hover:text-thover"
+                        class="text-sm text-[#007185] hover:underline hover:text-[#C7511F]"
                         >See
                         <template x-cloak x-if="seeMore">
                           <span>Less</span>
@@ -3124,123 +3124,98 @@
         </div>
       </section>
       <section id="reviews-section">
-        <div class="container mx-auto py-[30px]">
-          <div class="w-full flex space-x-[150px]">
-            <div class="w-[300px]">
-              <h1 class="text-xl font-bold">Customer reviews</h1>
-              <div class="w-full bg-white z-30">
-                <div class="flex items-center space-x-2 mb-3">
-                  <div class="flex">
-                    <img src="./images/starfull.png" alt="" />
-                    <img src="./images/starfull.png" alt="" />
-                    <img src="./images/starfull.png" alt="" />
-                    <img src="./images/starfull.png" alt="" />
-                    <img src="./images/starhalf.png" alt="" />
-                  </div>
-                  <span class="texr-lg text-[#0F1111] font-bold"
-                    >3 out of 5</span
-                  >
-                </div>
-                <p class="text-[#565959] text-sm mb-3">1 global rating</p>
-                <div class="flex flex-col space-y-4 pb-[30px] border-b">
-                  <div class="flex justify-between items-center">
-                    <span class="text-[#007185] text-sm"> 5 star</span>
-                    <div
-                      class="w-[197px] h-5 bg-[#F0F2F2] overflow-hidden rounded border hover:bg-[#FFF6E0] hover:border-thover"
-                    >
-                      <div
-                        class="w-full h-full bg-[#FFA41C]"
-                        style="width: 50%"
-                      ></div>
+        <div class="container mx-auto px-2 sm:px-0 py-[30px]">
+          <div class="w-full lg:flex xl:space-x-[150px] lg:space-x-[50px]">
+            <div class="lg:w-[300px] w-full flex flex-col lg:flex-col sm:flex-row sm:justify-evenly lg:justify-start border-b mb-5 lg:mb-0">
+              <div>
+                <h1 class="text-xl font-bold">Customer reviews</h1>
+                <div class="w-full bg-white z-30">
+                  <div class="flex items-center space-x-2 mb-3">
+                    <div class="flex">
+                      <img src="./images/starfull.png" alt="" />
+                      <img src="./images/starfull.png" alt="" />
+                      <img src="./images/starfull.png" alt="" />
+                      <img src="./images/starfull.png" alt="" />
+                      <img src="./images/starhalf.png" alt="" />
                     </div>
-                    <span class="text-[#007185] text-sm"> 50%</span>
+                    <span class="texr-lg text-[#0F1111] font-bold">3 out of 5</span>
                   </div>
-                  <div class="flex justify-between items-center">
-                    <span class="text-[#007185] text-sm"> 4 star</span>
-                    <div
-                      class="w-[197px] h-5 bg-[#F0F2F2] overflow-hidden rounded border hover:bg-[#FFF6E0] hover:border-thover"
-                    >
-                      <div
-                        class="w-full h-full bg-[#FFA41C]"
-                        style="width: 50%"
-                      ></div>
+                  <p class="text-[#565959] text-sm mb-3">1 global rating</p>
+                  <div class="flex flex-col space-y-4 pb-[30px] border-b">
+                    <div class="flex justify-between items-center">
+                      <span class="text-[#007185] text-sm"> 5 star</span>
+                      <div class="w-[197px] h-5 bg-[#F0F2F2] overflow-hidden rounded border hover:bg-[#FFF6E0] hover:border-[#C7511F]">
+                        <div class="w-full h-full bg-[#FFA41C]" style="width: 50%"></div>
+                      </div>
+                      <span class="text-[#007185] text-sm"> 50%</span>
                     </div>
-                    <span class="text-[#007185] text-sm"> 50%</span>
-                  </div>
-                  <div class="flex justify-between items-center">
-                    <span class="text-[#007185] text-sm"> 3 star</span>
-                    <div
-                      class="w-[197px] h-5 bg-[#F0F2F2] overflow-hidden rounded border hover:bg-[#FFF6E0] hover:border-thover"
-                    >
-                      <div
-                        class="w-full h-full bg-[#FFA41C]"
-                        style="width: 0%"
-                      ></div>
+                    <div class="flex justify-between items-center">
+                      <span class="text-[#007185] text-sm"> 4 star</span>
+                      <div class="w-[197px] h-5 bg-[#F0F2F2] overflow-hidden rounded border hover:bg-[#FFF6E0] hover:border-[#C7511F]">
+                        <div class="w-full h-full bg-[#FFA41C]" style="width: 50%"></div>
+                      </div>
+                      <span class="text-[#007185] text-sm"> 50%</span>
                     </div>
-                    <span class="text-[#007185] text-sm"> 0%</span>
-                  </div>
-                  <div class="flex justify-between items-center">
-                    <span class="text-[#007185] text-sm"> 2 star</span>
-                    <div
-                      class="w-[197px] h-5 bg-[#F0F2F2] overflow-hidden rounded border hover:bg-[#FFF6E0] hover:border-thover"
-                    >
-                      <div
-                        class="w-full h-full bg-[#FFA41C]"
-                        style="width: 0%"
-                      ></div>
+                    <div class="flex justify-between items-center">
+                      <span class="text-[#007185] text-sm"> 3 star</span>
+                      <div class="w-[197px] h-5 bg-[#F0F2F2] overflow-hidden rounded border hover:bg-[#FFF6E0] hover:border-[#C7511F]">
+                        <div class="w-full h-full bg-[#FFA41C]" style="width: 0%"></div>
+                      </div>
+                      <span class="text-[#007185] text-sm"> 0%</span>
                     </div>
-                    <span class="text-[#007185] text-sm"> 0%</span>
-                  </div>
-                  <div class="flex justify-between items-center">
-                    <span class="text-[#007185] text-sm"> 1 star</span>
-                    <div
-                      class="w-[197px] h-5 bg-[#F0F2F2] overflow-hidden rounded border hover:bg-[#FFF6E0] hover:border-thover"
-                    >
-                      <div
-                        class="w-full h-full bg-[#FFA41C]"
-                        style="width: 0%"
-                      ></div>
+                    <div class="flex justify-between items-center">
+                      <span class="text-[#007185] text-sm"> 2 star</span>
+                      <div class="w-[197px] h-5 bg-[#F0F2F2] overflow-hidden rounded border hover:bg-[#FFF6E0] hover:border-[#C7511F]">
+                        <div class="w-full h-full bg-[#FFA41C]" style="width: 0%"></div>
+                      </div>
+                      <span class="text-[#007185] text-sm"> 0%</span>
                     </div>
-                    <span class="text-[#007185] text-sm"> 0%</span>
+                    <div class="flex justify-between items-center">
+                      <span class="text-[#007185] text-sm"> 1 star</span>
+                      <div class="w-[197px] h-5 bg-[#F0F2F2] overflow-hidden rounded border hover:bg-[#FFF6E0] hover:border-[#C7511F]">
+                        <div class="w-full h-full bg-[#FFA41C]" style="width: 0%"></div>
+                      </div>
+                      <span class="text-[#007185] text-sm"> 0%</span>
+                    </div>
                   </div>
                 </div>
               </div>
               <div class="py-[30px] border-b">
-                <h1 class="text-tblack text-lg font-bold">
+                <h1 class="text-[#0F1111] text-lg font-bold">
                   Review this product
                 </h1>
-                <p class="text-sm text-tblack mt-1">
+                <p class="text-sm text-[#0F1111] mt-1">
                   Share your thoughts with other customers
                 </p>
                 <a href="#">
                   <div
-                    class="w-full h-[30px] rounded-lg text-sm text-tblack border shadow-lg flex justify-center items-center mt-5"
+                    class="w-full h-[30px] rounded-lg text-sm text-[#0F1111] border shadow-lg flex justify-center items-center mt-5"
                   >
                     Write a customer review
                   </div>
                 </a>
               </div>
             </div>
-            <div class="w-[632px]">
+            <div class="sm:w-[632px]">
               <h1 class="text-xl font-bold">Reviews with images</h1>
               <div class="mb-[30px]">
-                <div class="grid grid-cols-4 gap-2 mt-2">
+                <div class="grid sm:grid-cols-4 grid-cols-2 gap-2 mt-2">
                   <div class="item w-full h-[153px]">
-                    <img src="./images/review-img-1.jpg" alt="" />
+                    <img src="./images/review-img-1.jpg" alt="" class="w-full h-full" />
                   </div>
                   <div class="item w-full h-[153px]">
-                    <img src="./images/review-img-1.jpg" alt="" />
+                    <img src="./images/review-img-1.jpg" alt="" class="w-full h-full" />
                   </div>
                   <div class="item w-full h-[153px]">
-                    <img src="./images/review-img-1.jpg" alt="" />
+                    <img src="./images/review-img-1.jpg" alt="" class="w-full h-full" />
                   </div>
                   <div class="item w-full h-[153px]">
-                    <img src="./images/review-img-1.jpg" alt="" />
+                    <img src="./images/review-img-1.jpg" alt="" class="w-full h-full" />
                   </div>
                 </div>
                 <div class="mt-1">
                   <span
-                    class="text-sm text-[#007185] hover:underline hover:text-thover"
+                    class="text-sm text-[#007185] hover:underline hover:text-[#C7511F]"
                     >See all customer images</span
                   >
                 </div>
@@ -3420,7 +3395,7 @@
                   Top reviews from the United States
                 </h1>
                 <span
-                  class="text-sm text-[#007185] hover:underline hover:text-thover cursor-pointer"
+                  class="text-sm text-[#007185] hover:underline hover:text-[#C7511F] cursor-pointer"
                 >
                   Translate all reviews to English
                 </span>
@@ -3439,7 +3414,7 @@
                           class="w-full h-full"
                         />
                       </div>
-                      <span class="text-sm text-tblack">Debeck</span>
+                      <span class="text-sm text-[#0F1111]">Debeck</span>
                     </div>
                     <div class="flex items-center space-x-2">
                       <div class="flex">
@@ -3465,7 +3440,7 @@
                       >
                       <span class="text-sm text-[#565959]">|</span>
                       <span
-                        class="text-sm font-medium text-thover hover:underline cursor-pointer"
+                        class="text-sm font-medium text-[#C7511F] hover:underline cursor-pointer"
                         >Verified Purchase</span
                       >
                     </div>
@@ -3479,7 +3454,7 @@
                     >
                       <p
                         :class="seeMore?'h-auto':'h-[275px]'"
-                        class="text-sm text-tblack overflow-hidden"
+                        class="text-sm text-[#0F1111] overflow-hidden"
                       >
                         I love running, and I love long distances (favorite
                         racing distances are 10K, 12K, 15K, and half marathons).
@@ -3587,7 +3562,7 @@
                           </svg>
                         </span>
                         <span
-                          class="text-sm text-[#007185] hover:underline hover:text-thover"
+                          class="text-sm text-[#007185] hover:underline hover:text-[#C7511F]"
                           >Read
                           <template x-cloak x-if="seeMore">
                             <span>Less</span>
@@ -3627,7 +3602,7 @@
                     <div class="flex space-x-2 items-center mt-2">
                       <a href="#">
                         <div
-                          class="w-[98px] h-[30px] rounded-lg text-sm text-tblack border shadow-lg flex justify-center items-center"
+                          class="w-[98px] h-[30px] rounded-lg text-sm text-[#0F1111] border shadow-lg flex justify-center items-center"
                         >
                           Helpful
                         </div>
@@ -3651,7 +3626,7 @@
                           class="w-full h-full"
                         />
                       </div>
-                      <span class="text-sm text-tblack">Debeck</span>
+                      <span class="text-sm text-[#0F1111]">Debeck</span>
                     </div>
                     <div class="flex items-center space-x-2">
                       <div class="flex">
@@ -3677,7 +3652,7 @@
                       >
                       <span class="text-sm text-[#565959]">|</span>
                       <span
-                        class="text-sm font-medium text-thover hover:underline cursor-pointer"
+                        class="text-sm font-medium text-[#C7511F] hover:underline cursor-pointer"
                         >Verified Purchase</span
                       >
                     </div>
@@ -3691,7 +3666,7 @@
                     >
                       <p
                         :class="seeMore?'h-auto':'h-[275px]'"
-                        class="text-sm text-tblack overflow-hidden"
+                        class="text-sm text-[#0F1111] overflow-hidden"
                       >
                         I love running, and I love long distances (favorite
                         racing distances are 10K, 12K, 15K, and half marathons).
@@ -3799,7 +3774,7 @@
                           </svg>
                         </span>
                         <span
-                          class="text-sm text-[#007185] hover:underline hover:text-thover"
+                          class="text-sm text-[#007185] hover:underline hover:text-[#C7511F]"
                           >Read
                           <template x-cloak x-if="seeMore">
                             <span>Less</span>
@@ -3839,7 +3814,7 @@
                     <div class="flex space-x-2 items-center mt-2">
                       <a href="#">
                         <div
-                          class="w-[98px] h-[30px] rounded-lg text-sm text-tblack border shadow-lg flex justify-center items-center"
+                          class="w-[98px] h-[30px] rounded-lg text-sm text-[#0F1111] border shadow-lg flex justify-center items-center"
                         >
                           Helpful
                         </div>
@@ -3896,7 +3871,7 @@
         <div
           class="w-full py-[50px] bg-[#232F3E] border-b border-[#3a4553] px-2"
         >
-          <div class="container mx-auto">
+          <div class="container mx-auto px-2 sm:px-0">
             <div
               class="w-full h-full flex lg:flex-row flex-col space-y-5 lg:space-y-0 justify-evenly"
             >
