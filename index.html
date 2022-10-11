@@ -52,6 +52,10 @@
     sizeChart:false,
     sizeChartHandler:function(){
       this.sizeChart=!this.sizeChart;
+    },
+    fit:false,
+    fitHandler:function(){
+      this.fit=!this.fit;
     }
   }"
   >
@@ -154,6 +158,99 @@
                   </table>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </template>
+    <template x-cloak x-if="fit">
+      <div class="size-chart-wrapper w-full h-screen fixed left-0 top-0 z-10">
+        <div @click="fitHandler()" class="w-full h-full fixed left-0 top-0 bg-black bg-opacity-50 z-40"></div>
+        <div class="w-full h-full flex justify-center items-center">
+          <div class="w-[780px] h-[560px] bg-white relative z-40 rounded-lg overflow-hidden">
+            <div class="w-full h-[57px] bg-[#F0F2F2] px-6 flex items-center justify-end">
+              <div @click="fitHandler()" class="cursor-pointer">
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636z" />
+                  </svg>
+                </span>
+              </div>
+            </div>
+            <div class="px-[40px] pt-[30px]">
+              <div class="mb-3">
+                <div class="flex justify-center mb-5">
+                  <h2 class="text-[24px] text-tblack font-medium mb-2">
+                    Customers say this <span class="font-bold">fits true to size.</span>
+                  </h2>
+                </div>
+                <div class="flex space-x-6 ">
+                  <div class="w-[272px] flex flex-col space-y-4 pb-4">
+                    <div class="flex justify-between items-center">
+                      <p class="text-[#565959] text-sm font-medium w-[115px]">Too small</p>
+                      <div
+                        class="w-[127px] h-5 bg-[#F0F2F2] overflow-hidden rounded border hover:bg-[#FFF6E0] hover:border-thover">
+                        <div class="w-full h-full bg-[#FFA41C]" style="width: 50%"></div>
+                      </div>
+                      <span class="text-[#565959] text-sm font-medium"> 38</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                      <p class="text-[#565959] text-sm font-medium w-[115px]">Somewhat small</p>
+                      <div
+                        class="w-[127px] h-5 bg-[#F0F2F2] overflow-hidden rounded border hover:bg-[#FFF6E0] hover:border-thover">
+                        <div class="w-full h-full bg-[#FFA41C]" style="width: 50%"></div>
+                      </div>
+                      <span class="text-[#565959] text-sm font-medium"> 38</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                      <p class="text-[#565959] text-sm font-medium w-[115px]">True to size</p>
+                      <div
+                        class="w-[127px] h-5 bg-[#F0F2F2] overflow-hidden rounded border hover:bg-[#FFF6E0] hover:border-thover">
+                        <div class="w-full h-full bg-[#FFA41C]" style="width: 50%"></div>
+                      </div>
+                      <span class="text-[#565959] text-sm font-medium"> 38</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                      <p class="text-[#565959] text-sm font-medium w-[115px]">Somewhat large</p>
+                      <div
+                        class="w-[127px] h-5 bg-[#F0F2F2] overflow-hidden rounded border hover:bg-[#FFF6E0] hover:border-thover">
+                        <div class="w-full h-full bg-[#FFA41C]" style="width: 50%"></div>
+                      </div>
+                      <span class="text-[#565959] text-sm font-medium"> 38</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                      <p class="text-[#565959] text-sm font-medium w-[115px]">Too large</p>
+                      <div
+                        class="w-[127px] h-5 bg-[#F0F2F2] overflow-hidden rounded border hover:bg-[#FFF6E0] hover:border-thover">
+                        <div class="w-full h-full bg-[#FFA41C]" style="width: 50%"></div>
+                      </div>
+                      <span class="text-[#565959] text-sm font-medium"> 38</span>
+                    </div>
+                  </div>
+                  <div class="flex-1">
+                    <div class="flex flex-col space-y-1">
+                      <div>
+                        <p class="text-sm text-tblack">"They fit as expected (I got a woman's 7) and are very comfortable."
+                        </p>
+                        <p class="text-sm text-[#565959]">Kate Miller | Fit: True to size</p>
+                      </div>
+                      <div>
+                        <p class="text-sm text-tblack">"They fit as expected (I got a woman's 7) and are very comfortable."
+                        </p>
+                        <p class="text-sm text-[#565959]">Kate Miller | Fit: True to size</p>
+                      </div>
+                      <div>
+                        <p class="text-sm text-tblack">"They fit as expected (I got a woman's 7) and are very comfortable."
+                        </p>
+                        <p class="text-sm text-[#565959]">Kate Miller | Fit: True to size</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+      
             </div>
           </div>
         </div>
@@ -1547,7 +1644,7 @@
                           <div class="flex justify-between items-center">
                             <span class="text-[#007185] text-sm"> 5 star</span>
                             <div
-                              class="w-[197px] h-5 bg-[#F0F2F2] overflow-hidden rounded border"
+                              class="w-[197px] h-5 bg-[#F0F2F2] overflow-hidden rounded border hover:bg-[#FFF6E0] hover:border-thover"
                             >
                               <div
                                 class="w-full h-full bg-[#FFA41C]"
@@ -1559,7 +1656,7 @@
                           <div class="flex justify-between items-center">
                             <span class="text-[#007185] text-sm"> 4 star</span>
                             <div
-                              class="w-[197px] h-5 bg-[#F0F2F2] overflow-hidden rounded border"
+                              class="w-[197px] h-5 bg-[#F0F2F2] overflow-hidden rounded border hover:bg-[#FFF6E0] hover:border-thover"
                             >
                               <div
                                 class="w-full h-full bg-[#FFA41C]"
@@ -1571,7 +1668,7 @@
                           <div class="flex justify-between items-center">
                             <span class="text-[#007185] text-sm"> 3 star</span>
                             <div
-                              class="w-[197px] h-5 bg-[#F0F2F2] overflow-hidden rounded border"
+                              class="w-[197px] h-5 bg-[#F0F2F2] overflow-hidden rounded border hover:bg-[#FFF6E0] hover:border-thover"
                             >
                               <div
                                 class="w-full h-full bg-[#FFA41C]"
@@ -1583,7 +1680,7 @@
                           <div class="flex justify-between items-center">
                             <span class="text-[#007185] text-sm"> 2 star</span>
                             <div
-                              class="w-[197px] h-5 bg-[#F0F2F2] overflow-hidden rounded border"
+                              class="w-[197px] h-5 bg-[#F0F2F2] overflow-hidden rounded border hover:bg-[#FFF6E0] hover:border-thover"
                             >
                               <div
                                 class="w-full h-full bg-[#FFA41C]"
@@ -1595,7 +1692,7 @@
                           <div class="flex justify-between items-center">
                             <span class="text-[#007185] text-sm"> 1 star</span>
                             <div
-                              class="w-[197px] h-5 bg-[#F0F2F2] overflow-hidden rounded border"
+                              class="w-[197px] h-5 bg-[#F0F2F2] overflow-hidden rounded border hover:bg-[#FFF6E0] hover:border-thover"
                             >
                               <div
                                 class="w-full h-full bg-[#FFA41C]"
@@ -1634,7 +1731,7 @@
                 </div>
                 <div class="mb-2">
                   <span class="text-sm font-bold text-black">Fit:</span>
-                  <span
+                  <span @click="fitHandler"
                     class="text-sm text-[#007185] hover:underline hover:text-thover cursor-pointer leading-none"
                     >True to size. Order usual size.</span
                   >
@@ -1894,7 +1991,7 @@
               </div>
               <div>
                 <div class="w-full border border-[#ccc] relative p-2 mt-10">
-                  <div class="z-20 dealbadge-container absolute left-0 top-0 shadow-sm1">
+                  <div class="dealbadge-container absolute left-0 top-0 shadow-sm1">
                     <div class="relative inline-block pl-[6px] pr-0.5 pt-[1px] pb-[1px] bg-orange-500">
                       <span
                         class="absolute left-[0] top-[0] bottom-[0] right-[0] translate-x-[5px] skew-x-[-15deg] bg-orange-500"></span><span
@@ -2290,7 +2387,7 @@
                       <div class="flex justify-between items-center">
                         <span class="text-[#007185] text-sm"> 5 star</span>
                         <div
-                          class="w-[197px] h-5 bg-[#F0F2F2] overflow-hidden rounded border"
+                          class="w-[197px] h-5 bg-[#F0F2F2] overflow-hidden rounded border hover:bg-[#FFF6E0] hover:border-thover"
                         >
                           <div
                             class="w-full h-full bg-[#FFA41C]"
@@ -2302,7 +2399,7 @@
                       <div class="flex justify-between items-center">
                         <span class="text-[#007185] text-sm"> 4 star</span>
                         <div
-                          class="w-[197px] h-5 bg-[#F0F2F2] overflow-hidden rounded border"
+                          class="w-[197px] h-5 bg-[#F0F2F2] overflow-hidden rounded border hover:bg-[#FFF6E0] hover:border-thover"
                         >
                           <div
                             class="w-full h-full bg-[#FFA41C]"
@@ -2314,7 +2411,7 @@
                       <div class="flex justify-between items-center">
                         <span class="text-[#007185] text-sm"> 3 star</span>
                         <div
-                          class="w-[197px] h-5 bg-[#F0F2F2] overflow-hidden rounded border"
+                          class="w-[197px] h-5 bg-[#F0F2F2] overflow-hidden rounded border hover:bg-[#FFF6E0] hover:border-thover"
                         >
                           <div
                             class="w-full h-full bg-[#FFA41C]"
@@ -2326,7 +2423,7 @@
                       <div class="flex justify-between items-center">
                         <span class="text-[#007185] text-sm"> 2 star</span>
                         <div
-                          class="w-[197px] h-5 bg-[#F0F2F2] overflow-hidden rounded border"
+                          class="w-[197px] h-5 bg-[#F0F2F2] overflow-hidden rounded border hover:bg-[#FFF6E0] hover:border-thover"
                         >
                           <div
                             class="w-full h-full bg-[#FFA41C]"
@@ -2338,7 +2435,7 @@
                       <div class="flex justify-between items-center">
                         <span class="text-[#007185] text-sm"> 1 star</span>
                         <div
-                          class="w-[197px] h-5 bg-[#F0F2F2] overflow-hidden rounded border"
+                          class="w-[197px] h-5 bg-[#F0F2F2] overflow-hidden rounded border hover:bg-[#FFF6E0] hover:border-thover"
                         >
                           <div
                             class="w-full h-full bg-[#FFA41C]"
@@ -3049,7 +3146,7 @@
                   <div class="flex justify-between items-center">
                     <span class="text-[#007185] text-sm"> 5 star</span>
                     <div
-                      class="w-[197px] h-5 bg-[#F0F2F2] overflow-hidden rounded border"
+                      class="w-[197px] h-5 bg-[#F0F2F2] overflow-hidden rounded border hover:bg-[#FFF6E0] hover:border-thover"
                     >
                       <div
                         class="w-full h-full bg-[#FFA41C]"
@@ -3061,7 +3158,7 @@
                   <div class="flex justify-between items-center">
                     <span class="text-[#007185] text-sm"> 4 star</span>
                     <div
-                      class="w-[197px] h-5 bg-[#F0F2F2] overflow-hidden rounded border"
+                      class="w-[197px] h-5 bg-[#F0F2F2] overflow-hidden rounded border hover:bg-[#FFF6E0] hover:border-thover"
                     >
                       <div
                         class="w-full h-full bg-[#FFA41C]"
@@ -3073,7 +3170,7 @@
                   <div class="flex justify-between items-center">
                     <span class="text-[#007185] text-sm"> 3 star</span>
                     <div
-                      class="w-[197px] h-5 bg-[#F0F2F2] overflow-hidden rounded border"
+                      class="w-[197px] h-5 bg-[#F0F2F2] overflow-hidden rounded border hover:bg-[#FFF6E0] hover:border-thover"
                     >
                       <div
                         class="w-full h-full bg-[#FFA41C]"
@@ -3085,7 +3182,7 @@
                   <div class="flex justify-between items-center">
                     <span class="text-[#007185] text-sm"> 2 star</span>
                     <div
-                      class="w-[197px] h-5 bg-[#F0F2F2] overflow-hidden rounded border"
+                      class="w-[197px] h-5 bg-[#F0F2F2] overflow-hidden rounded border hover:bg-[#FFF6E0] hover:border-thover"
                     >
                       <div
                         class="w-full h-full bg-[#FFA41C]"
@@ -3097,7 +3194,7 @@
                   <div class="flex justify-between items-center">
                     <span class="text-[#007185] text-sm"> 1 star</span>
                     <div
-                      class="w-[197px] h-5 bg-[#F0F2F2] overflow-hidden rounded border"
+                      class="w-[197px] h-5 bg-[#F0F2F2] overflow-hidden rounded border hover:bg-[#FFF6E0] hover:border-thover"
                     >
                       <div
                         class="w-full h-full bg-[#FFA41C]"
