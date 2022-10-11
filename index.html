@@ -1354,7 +1354,8 @@
                 <div class="w-[45px] h-full flex flex-col space-y-2">
                   <template x-for="item in imgModule.leftSrcs">
                     <div
-                      class="w-full h-[40px] border border-[#a2a6ac] hover:border-[#e4791180] hover:shadow-lg hover:shadow-[#e4791180] cursor-pointer"
+                    :class="imgModule.current===item.lg?'shadow-lg shadow-[#e4791180] border-[#e4791180]':'border-[#a2a6ac]'"
+                      class="w-full h-[40px] border  hover:border-[#e4791180] hover:shadow-lg hover:shadow-[#e4791180] cursor-pointer"
                     >
                       <img
                         @mouseover="imgModule.changeSrc(item.lg)"
@@ -1707,7 +1708,8 @@
                 <div class="w-full flex space-x-2 mb-2">
                   <template x-for="item in imgModule.variantSrcs">
                     <div
-                      class="w-[47px] h-[47px] border border-[#a2a6ac] hover:border-[#e4791180] hover:shadow-lg hover:shadow-[#e4791180] cursor-pointer"
+                     :class="imgModule.current===item.lg?'shadow-lg shadow-[#e4791180] border-[#e4791180]':'border-[#a2a6ac]'"
+                      class="w-[47px] h-[47px] border hover:border-[#e4791180] hover:shadow-lg hover:shadow-[#e4791180] cursor-pointer"
                     >
                       <img
                         @mouseover="imgModule.changeVariantSrc(item.lg,item.name)"
