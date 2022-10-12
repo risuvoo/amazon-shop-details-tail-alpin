@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="/fordev/temp.tailwind.min.js"></script>
+    <script defer src="/fordev/temp.alpine.min.js"></script>
     <title>amazon</title>
     <style>
       [x-cloak] {
@@ -39,7 +39,23 @@
     fit:false,
     fitHandler:function(){
       this.fit=!this.fit;
-    }
+    },
+    reviewDetails:false,
+    currentReviewImg:'review-img-1.jpg',
+    reviewImgs:['review-img-1.jpg','review-img-2.jpg'],
+    userSubmitedImg:['review-img-1.jpg','review-img-2.jpg'],
+    reveiwImgsHandler:function(src){
+      this.currentReviewImg=src;
+    },
+    reviewDetailsHandler:function(src){
+      if(src){
+        this.currentReviewImg=src;
+         this.reviewDetails=!this.reviewDetails;
+      }else{
+        this.reviewDetails=!this.reviewDetails;
+      }
+       
+    },
   }"
   >
     <template x-cloak x-if="sizeChart">
@@ -234,6 +250,148 @@
                 </div>
               </div>
       
+            </div>
+          </div>
+        </div>
+      </div>
+    </template>
+    <template x-cloak x-if="reviewDetails">
+      <div class="size-chart-wrapper w-full h-screen fixed left-0 top-0 z-10">
+        <div @click="reviewDetailsHandler()" class="w-full h-full fixed left-0 top-0 bg-black bg-opacity-50 z-40"></div>
+        <div class="w-full h-full flex justify-center items-center">
+          <div class="lg:w-[1038px] w-full h-full lg:h-[717px] bg-white relative z-40 rounded-lg overflow-hidden">
+            <div class="w-full h-[57px] bg-[#F0F2F2] px-6 flex items-center justify-end">
+              <div @click="reviewDetailsHandler()" class="cursor-pointer">
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636z" />
+                  </svg>
+                </span>
+              </div>
+            </div>
+            <div class="flex sm:px-[40px] sm:pt-[30px] w-full h-full p-6">
+              <div class="lg:flex lg:h-[600px] lg:space-x-5 h-full overflow-auto">
+                <div class="lg:w-[660px] w-full lg:h-full h-[400px]">
+                  <div class="w-full h-full bg-black">
+                    <img :src="`/images/${currentReviewImg}`" alt="" class="w-full h-full object-contain" />
+                  </div>
+                </div>
+                <div class="flex-1 h-full lg:overflow-auto mt-5 lg:mt-0">
+                  <div>
+                    <div class="flex items-center space-x-1">
+                      <div class="flex">
+                        <img src="./images/starfull.png" alt="">
+                        <img src="./images/starfull.png" alt="">
+                        <img src="./images/starfull.png" alt="">
+                        <img src="./images/starfull.png" alt="">
+                        <img src="./images/starhalf.png" alt="">
+                      </div>
+                      <span class="text-sm text-[#0F1111] font-bold">OH SO COMFORTABLE!</span>
+                    </div>
+                    <p class="text-xs text-[#565959]">
+                      By Debeck on July 5, 2020
+                    </p>
+                  </div>
+                  <p class="text-black text-sm">I love running, and I love long distances (favorite racing distances are 10K,
+                    12K, 15K, and half marathons). Back in my
+                    high school track-and-field days, I was fitted and told I need to use a specific line of Brooks for
+                    support. Eventually
+                    I evolved to like Saucony; mainly because they were cheaper but also because the fit...worked? After I
+                    started
+                    triathlons and Ironmans a few years ago, my miles grew exponentially so I decided to get refitted for a
+                    better sneaker
+                    once more. I found the Brooks Ghost at that point and was very pleased for nearly 9-ish months. They were
+                    a comfortable
+                    shoe that fit me well, however I found over time, the lack of ankle support really started to take it's
+                    toll. FYI, I
+                    change out my shoes roughly every 3-4 months depending on the amount of miles ran. By about last December,
+                    I started to
+                    get right foot pain after each run. Instead of looking elsewhere, I bought the next generation of Brooks
+                    Ghost. This
+                    seemed to only worsen the lack of ankle support and regular foot pain after longer distances. Finally, in
+                    search of
+                    another shoe, I found myself drawn to Nike even though I've never owned a pair of Nikes in my life.
+                    RunnersWorld and
+                    Triathlon articles have many suggested brands, and I never thought I'd see the day Nike was in their top
+                    10. I must've
+                    missed how much Nike has changed their line of runners over the past decade; suggesting that their shoes
+                    are now more
+                    comfortable and faster. I decided to take a chance with the Air Zoom Pegasus 36. The moment I put these
+                    on, they felt
+                    AMAZING! Typically any pair of new running shoes needs some time doing low miles to really break them in,
+                    however these
+                    adorable lime green Pegasus felt like they were made for my feet from day one! I should advise, I do have
+                    normal to
+                    narrower feet and these fit like a glove. The Pegasus is like a cloud supporting all the right places,
+                    springing
+                    comfortably with each stride, and VERY lightweight! I was so surprised at the light feel that I put these
+                    on an
+                    ounce/gram scale to compare with my Ghosts. The Pegasus 36 pair weighed in at 478 grams and the Ghost 12
+                    pair weighed in
+                    at 568... a 90g difference! That may not sound like much but when you add miles or do the distance after
+                    90K of biking,
+                    shaving off a few grams can make all the difference. On my first run with these I took them to the track
+                    and did 8.5
+                    miles, 6.25 of which at race pace. I got some of my fastest times recorded in a long time on the track
+                    that day. And
+                    bonus, no ankle or foot pain! I also did not need to stretch regularly between splits, because my legs
+                    felt amazing!
+                    Time will really tell how the Pegasus will hold up against the elements, but to be honest, even if these
+                    don't make it
+                    as my new, forever running brand, I would be happy to keep these as an everyday walking shoe. They are OH
+                    SO
+                    COMFORTABLE! Today after my run I actually put them back on to wear at work for a 12-hour shift. I can
+                    honestly say I
+                    never did that with my Ghosts 11s or 12s. :-)
+      
+                    I'll report back in a few months to advise how these are holding up. ...maybe by then I'll actually get to
+                    run a race in
+                    these?!?!?! *hopes* That is, if Covid-19 ever calms the fudge down!!!!
+      
+                    Hope y'all stay safe and healthy out there! Cheers!
+      
+                    ***5 month update***** I still love the Nike Pegasus 36. Since July I purchased a 2nd pair in pink/black
+                    in order to
+                    alternate wear. The shoes still feel as comfortable as ever. I have even been able to run two
+                    Covid-approved races since
+                    October (a 10K and Half Marathon) where I placed 1st place overall female in both! However, I discovered
+                    that while I
+                    love the light-weight and energy transfer from the Pegasus, I am a greater fan of them with in shorter
+                    distances. When
+                    reaching the 13 mile mark, my joints feel as those they could use more stability. In a 10K, the Pegasus
+                    worked
+                    fantastic! I compared a half marathon solo run with the Pegasus then did the same with my old Brooks
+                    Ghost. While the
+                    Brooks still caused a few blisters and foot pain, my knees and poster kept better than with the Pegasus.
+                    I've learned
+                    that sometimes too much cushion with less structure can cause more work for the body to maneuver between
+                    stride (for me
+                    at least). I am still a complete fan of the Pegasus and will continue to use them in training and
+                    DEFINITELY for any
+                    races shorter than 13.1 miles. However, I am now on the hunt for another shoe that'll go the distance with
+                    the same
+                    lightness and bounce as the Pegasus but with stability to keep my form in check when I reach those
+                    "greater fatigue
+                    miles".
+      
+                    Thanks for listening! Happy running! :-D</p>
+                  <div class="mt-5  pb-10 lg:pb-0">
+                    <h1 class="text-xl text-[#565959] font-medium">Images in this review</h1>
+                    <div class="mb-[30px]">
+                      <div class="flex space-x-2">
+                        <template x-for="item in reviewImgs">
+                          <div @click="reveiwImgsHandler(item)" class="item w-10 h-10 cursor-pointer">
+                            <img :src="`./images/${item}`" alt="" class="w-full h-full" />
+                          </div>
+                        </template>
+                      </div>
+      
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -1939,13 +2097,23 @@
                   <p class="text-sm text-[#0F1111] text-center">
                     To buy, select <span class="font-bold"> Size</span>
                   </p>
-                  <div class="w-full flex justify-center">
+                  <div class="w-full flex justify-center relative group">
                     <button
                       type="button"
                       class="w-full h-[30px] text-sm text-[#0F1111] bg-[#F7CA00] rounded-full mt-2"
                     >
                       Add to Cart
                     </button>
+                    <div class="w-[195px] group-hover:block hidden h-[75px] bg-white border absolute -left-[210px] -top-3 shadow-lg">
+                      <div class="w-full h-full relative p-4">
+                        <div class="text-sm">Select <b><strong>Size</strong></b> from the left<br>
+                          to add to Shopping Cart</div>
+                        <div class="absolute -right-3 top-[40%]">
+                          <span
+                            class="w-0 h-0 transform rotate-[270deg] border-8 block border-b-transparent border-l-transparent border-r-transparent border-t-white border-b-0"></span>
+                          </div>
+                        </div>
+                      </div>
                   </div>
                 </div>
                 <a href="#">
@@ -3183,18 +3351,13 @@
               <h1 class="text-xl font-bold">Reviews with images</h1>
               <div class="mb-[30px]">
                 <div class="grid sm:grid-cols-4 grid-cols-2 gap-2 mt-2">
-                  <div class="item w-full h-[153px]">
-                    <img src="./images/review-img-1.jpg" alt="" class="w-full h-full" />
-                  </div>
-                  <div class="item w-full h-[153px]">
-                    <img src="./images/review-img-1.jpg" alt="" class="w-full h-full" />
-                  </div>
-                  <div class="item w-full h-[153px]">
-                    <img src="./images/review-img-1.jpg" alt="" class="w-full h-full" />
-                  </div>
-                  <div class="item w-full h-[153px]">
-                    <img src="./images/review-img-1.jpg" alt="" class="w-full h-full" />
-                  </div>
+                  <template x-for="item in reviewImgs">
+                    <div @click="reviewDetailsHandler(item)" class="item w-full h-[155px]">
+                      <img :src="`./images/${item}`" alt="" class="w-full h-full" />
+                    </div>
+                  </template>
+                  
+                  
                 </div>
                 <div class="mt-1">
                   <span
@@ -3557,27 +3720,13 @@
                       </div>
                     </div>
                     <div class="flex space-x-1 mb-5">
-                      <div class="w-[177px] h-[88px]">
-                        <img
-                          src="./images/review-img-1.jpg"
-                          alt=""
-                          class="w-full h-full object-cover"
-                        />
-                      </div>
-                      <div class="w-[177px] h-[88px]">
-                        <img
-                          src="./images/review-img-1.jpg"
-                          alt=""
-                          class="w-full h-full object-cover"
-                        />
-                      </div>
-                      <div class="w-[177px] h-[88px]">
-                        <img
-                          src="./images/review-img-1.jpg"
-                          alt=""
-                          class="w-full h-full object-cover"
-                        />
-                      </div>
+                      <template x-for="item in userSubmitedImg">
+                        <div @click="reviewDetailsHandler(item)" class="w-[177px] h-[88px]">
+                          <img :src="`./images/${item}`" alt="" class="w-full h-full object-cover" />
+                        </div>
+                      </template>
+                      
+                      
                     </div>
                     <p class="text-sm text-[#565959]">
                       317 people found this helpful
@@ -3600,14 +3749,10 @@
                 <div class="item">
                   <div>
                     <div class="flex space-x-3 items-center">
-                      <div
-                        class="w-[34px] h-[34px] rounded-full overflow-hidden"
-                      >
+                      <div class="w-[34px] h-[34px] rounded-full overflow-hidden">
                         <img
                           src="https://images-na.ssl-images-amazon.com/images/W/IMAGERENDERING_521856-T1/images/S/amazon-avatars-global/42fffeb5-ac63-4df3-9abf-6fb5f35f9fdf._CR66,0,367,367_SX48_.jpg"
-                          alt=""
-                          class="w-full h-full"
-                        />
+                          alt="" class="w-full h-full" />
                       </div>
                       <span class="text-sm text-[#0F1111]">Debeck</span>
                     </div>
@@ -3619,9 +3764,7 @@
                         <img src="./images/starfull.png" alt="" />
                         <img src="./images/starhalf.png" alt="" />
                       </div>
-                      <span class="texr-lg text-[#0F1111] font-bold"
-                        >OH SO COMFORTABLE!</span
-                      >
+                      <span class="texr-lg text-[#0F1111] font-bold">OH SO COMFORTABLE!</span>
                     </div>
                     <p class="text-sm text-[#565959]">
                       Reviewed in the United States on July 6, 2020
@@ -3629,28 +3772,18 @@
                     <div class="flex space-x-2 items-center">
                       <span class="text-sm text-[#565959]">Size: 9</span>
                       <span class="text-sm text-[#565959]">|</span>
-                      <span class="text-sm text-[#565959]"
-                        >Color: Multicolour Phantom Bio Beige Barely Volt
-                        2</span
-                      >
+                      <span class="text-sm text-[#565959]">Color: Multicolour Phantom Bio Beige Barely Volt
+                        2</span>
                       <span class="text-sm text-[#565959]">|</span>
-                      <span
-                        class="text-sm font-medium text-[#C7511F] hover:underline cursor-pointer"
-                        >Verified Purchase</span
-                      >
+                      <span class="text-sm font-medium text-[#C7511F] hover:underline cursor-pointer">Verified Purchase</span>
                     </div>
-                    <div
-                      x-data="{
+                    <div x-data="{
                                       seeMore:false,
                                       seeMoreHandler:function(){
                                         this.seeMore=!this.seeMore;
                                       }
-                                    }"
-                    >
-                      <p
-                        :class="seeMore?'h-auto':'h-[275px]'"
-                        class="text-sm text-[#0F1111] overflow-hidden"
-                      >
+                                    }">
+                      <p :class="seeMore?'h-auto':'h-[275px]'" class="text-sm text-[#0F1111] overflow-hidden">
                         I love running, and I love long distances (favorite
                         racing distances are 10K, 12K, 15K, and half marathons).
                         Back in my high school track-and-field days, I was
@@ -3736,29 +3869,14 @@
                         to keep my form in check when I reach those "greater
                         fatigue miles". Thanks for listening! Happy running! :-D
                       </p>
-                      <div
-                        @click="seeMoreHandler()"
-                        class="flex space-x-1 mb-2 items-center cursor-pointer"
-                      >
-                        <span
-                          :class="seeMore?'rotate-180':'rotate-0'"
-                          class="transform"
-                        >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 24 24"
-                            width="20"
-                            height="20"
-                          >
+                      <div @click="seeMoreHandler()" class="flex space-x-1 mb-2 items-center cursor-pointer">
+                        <span :class="seeMore?'rotate-180':'rotate-0'" class="transform">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
                             <path fill="none" d="M0 0h24v24H0z"></path>
-                            <path
-                              d="M12 15l-4.243-4.243 1.415-1.414L12 12.172l2.828-2.829 1.415 1.414z"
-                            ></path>
+                            <path d="M12 15l-4.243-4.243 1.415-1.414L12 12.172l2.828-2.829 1.415 1.414z"></path>
                           </svg>
                         </span>
-                        <span
-                          class="text-sm text-[#007185] hover:underline hover:text-[#C7511F]"
-                          >Read
+                        <span class="text-sm text-[#007185] hover:underline hover:text-[#C7511F]">Read
                           <template x-cloak x-if="seeMore">
                             <span>Less</span>
                           </template>
@@ -3769,27 +3887,13 @@
                       </div>
                     </div>
                     <div class="flex space-x-1 mb-5">
-                      <div class="w-[177px] h-[88px]">
-                        <img
-                          src="./images/review-img-1.jpg"
-                          alt=""
-                          class="w-full h-full object-cover"
-                        />
-                      </div>
-                      <div class="w-[177px] h-[88px]">
-                        <img
-                          src="./images/review-img-1.jpg"
-                          alt=""
-                          class="w-full h-full object-cover"
-                        />
-                      </div>
-                      <div class="w-[177px] h-[88px]">
-                        <img
-                          src="./images/review-img-1.jpg"
-                          alt=""
-                          class="w-full h-full object-cover"
-                        />
-                      </div>
+                      <template x-for="item in userSubmitedImg">
+                        <div @click="reviewDetailsHandler(item)" class="w-[177px] h-[88px]">
+                          <img :src="`./images/${item}`" alt="" class="w-full h-full object-cover" />
+                        </div>
+                      </template>
+                
+                
                     </div>
                     <p class="text-sm text-[#565959]">
                       317 people found this helpful
@@ -3797,15 +3901,12 @@
                     <div class="flex space-x-2 items-center mt-2">
                       <a href="#">
                         <div
-                          class="w-[98px] h-[30px] rounded-lg text-sm text-[#0F1111] border shadow-lg flex justify-center items-center"
-                        >
+                          class="w-[98px] h-[30px] rounded-lg text-sm text-[#0F1111] border shadow-lg flex justify-center items-center">
                           Helpful
                         </div>
                       </a>
                       <span class="text-sm text-[#565959]">|</span>
-                      <span class="text-sm text-[#565959] cursor-pointer"
-                        >Report abuse</span
-                      >
+                      <span class="text-sm text-[#565959] cursor-pointer">Report abuse</span>
                     </div>
                   </div>
                 </div>
