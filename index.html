@@ -14,7 +14,7 @@
     </style>
   </head>
 
-  <body
+  <body :class="drawer||fit||reviewDetails||sizeChart||feedback?'overflow-y-hidden':'overflow-y-auto'"
     x-data="{
     backToTop:function(){
     window.scrollTo({top:0,behavior: 'smooth'})
@@ -22,7 +22,7 @@
     },
     drawer:false,
     toggleDrawer:function(){
-    this.drawer=!this.drawer;
+       this.drawer=!this.drawer;
     },
     category:true,
     toggleCategory:function(){
@@ -1459,7 +1459,7 @@
     <main>
       <!--        row single product-->
       <section class="w-full h-[55px] bg-[#F7F8F8] border-b border-gray-200">
-        <div class="container mx-auto px-2 sm:px-0 h-full">
+        <div class="container mx-auto px-2 sm:px-3 lg:px-0 h-full">
           <a href="#">
             <div
               class="w-full h-full flex items-center justify-between sm:px-[140px]"
@@ -1508,7 +1508,7 @@
       </section>
       <!--        breadcrumb-->
       <section class="w-full mb-[20px] relative">
-        <div class="container mx-auto px-2 sm:px-0">
+        <div class="container mx-auto px-2 sm:px-3 lg:px-0">
           <div class="w-full">
             <ul class="flex space-x-1 items-center">
               <li class="text-xs text-[#565959]">
@@ -1585,7 +1585,7 @@
         }"
         class="w-full "
       >
-        <div class="container mx-auto px-2 sm:px-0">
+        <div class="container mx-auto px-2 sm:px-3 lg:px-0">
           <div class="w-full flex space-x-[30px] pb-[30px] border-b">
             <div class="flex-1 lg:flex lg:space-x-[30px]">
               <div class="lg:w-[595px] w-full flex sm:flex-row flex-col-reverse h-[460px] relative mt-[50px] sm:mt-0">
@@ -2207,7 +2207,7 @@
         </div>
       </section>
       <section>
-        <div class="container mx-auto px-2 sm:px-0 py-[30px] border-b">
+        <div class="container mx-auto px-2 sm:px-3 lg:px-0 py-[30px] border-b">
           <div class="mb-3">
             <div class="flex justify-between items-center">
               <h1 class="text-[24px] font-bold text-[#0F1111]">4 stars and above</h1>
@@ -2452,7 +2452,7 @@
         </div>
       </section>
       <section>
-        <div class="container mx-auto px-2 sm:px-0 py-[30px] border-b">
+        <div class="container mx-auto px-2 sm:px-3 lg:px-0 py-[30px] border-b">
           <h1 class="text-[24px] font-bold text-[#0F1111] mb-3">
             Product Details
           </h1>
@@ -2613,7 +2613,7 @@
         </div>
       </section>
       <section>
-        <div class="container mx-auto px-2 sm:px-0 py-[30px] border-b">
+        <div class="container mx-auto px-2 sm:px-3 lg:px-0 py-[30px] border-b">
           <div class="mb-3">
             <div class="sm:flex justify-between items-center">
               <h1 class="text-[24px] font-bold text-[#0F1111]">Related products with free delivery on eligible orders</h1>
@@ -2865,7 +2865,7 @@
         </div>
       </section>
       <section id="upvoted">
-        <div class="container mx-auto px-2 sm:px-0 py-[30px] border-b">
+        <div class="container mx-auto px-2 sm:px-3 lg:px-0 py-[30px] border-b">
           <h1 class="text-[24px] font-bold text-[#0F1111] mb-6">
             Customer questions & answers
           </h1>
@@ -3275,7 +3275,7 @@
         </div>
       </section>
       <section id="reviews-section">
-        <div class="container mx-auto px-2 sm:px-0 py-[30px]">
+        <div class="container mx-auto px-2 sm:px-3 lg:px-0 py-[30px]">
           <div class="w-full lg:flex xl:space-x-[150px] lg:space-x-[50px]">
             <div class="lg:w-[300px] w-full flex flex-col lg:flex-col sm:flex-row sm:justify-evenly lg:justify-start border-b mb-5 lg:mb-0">
               <div>
@@ -3955,7 +3955,7 @@
         <div
           class="w-full py-[50px] bg-[#232F3E] border-b border-[#3a4553] px-2"
         >
-          <div class="container mx-auto px-2 sm:px-0">
+          <div class="container mx-auto px-2 sm:px-3 lg:px-0">
             <div
               class="w-full h-full flex lg:flex-row flex-col space-y-5 lg:space-y-0 justify-evenly"
             >
