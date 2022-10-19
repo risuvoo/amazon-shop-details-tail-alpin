@@ -16,6 +16,10 @@
 
   <body :class="drawer||fit||reviewDetails||sizeChart||feedback?'overflow-y-hidden':'overflow-y-auto'"
     x-data="{
+       blackShade:false,
+  blackShadeHandler:function(){
+    this.blackShade=!this.blackShade;
+  },
     backToTop:function(){
     window.scrollTo({top:0,behavior: 'smooth'})
 
@@ -58,6 +62,10 @@
     },
   }"
   >
+  <template x-cloak x-if="blackShade">
+      <div class="fixed left-0 top-0 bg-black bg-opacity-50 w-full h-full z-30"></div>
+
+    </template>
     <template x-cloak x-if="sizeChart">
       <div class="size-chart-wrapper w-full h-screen fixed left-0 top-0 z-10">
         <div
@@ -866,6 +874,7 @@
               suggestBox:false,
               toggleBox:function(){
               this.suggestBox=!this.suggestBox;
+              blackShadeHandler();
               }
               }
 
@@ -965,7 +974,7 @@
                 </span>
               </div>
             </div>
-            <div
+            <div @mouseenter="blackShadeHandler()" @mouseleave="blackShade=false"
               class="relative group px-3 py-2 border border-transparent hover:border-white"
             >
               <a href="#">
@@ -1185,7 +1194,7 @@
                 </div>
               </div>
             </div>
-            <div
+            <div @mouseenter="blackShadeHandler()" @mouseleave="blackShade=false"
               class="relative group mt-2 px-1 pb-2 border border-transparent hover:border-white"
             >
               <a href="#">
@@ -1204,10 +1213,10 @@
                 </div>
               </a>
               <div
-                class="w-0 h-0 group-hover:block hidden border-[9px] border-b-white border-transparent absolute left-[110px] -bottom-[5px] z-30"
+                class="w-0 h-0 group-hover:block hidden border-[9px] border-b-white border-transparent absolute left-[110px] -bottom-[2px] z-30"
               ></div>
               <div
-                class="w-[500px] h-[387px] group-hover:block hidden bg-white border rounded shadow-xl border border-[#DDD] absolute -left-[240px] top-[48px] p-6"
+                class="w-[500px] h-[387px] group-hover:block hidden bg-white border rounded shadow-xl border border-[#DDD] absolute -left-[240px] top-[45px] p-6"
               >
                 <div class="flex flex-col items-center border-b pb-3 mb-3">
                   <a href="#">
